@@ -9,5 +9,27 @@
 /*   Updated: 2025/04/23 13:08:31 by fzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <string.h>
+char*	strnstr(const char	*big, const char	*little, size_t	len) {
+	int	inner_count;
+	int	swi;
 
-
+	while(!*big)
+	{
+		inner_count = 0;
+		if(*big == little[inner_count] || !little[inner_count])
+		{
+			swi = 1;
+			while(little[inner_count] && (inner_count <= len) && swi)
+			{
+				if(*big != little[inner_count])
+					swi = 0;
+				inner_count++;
+			}
+		}
+		if(swi)
+			return(big);
+		big++;
+	}
+	return (NULL);
+}
