@@ -22,67 +22,92 @@ unsigned int    get_len(char const *s, char c)
     {
         if(s[i] == c)
         {
-
+		while(s[i] == c)
+			i++;
+		count++;
         }
-            count++;
-        i++;
+        else
+        	i++;
     }
-    if(s[0] == c)
+    if(s[0] == c && s[i - 1] == c)
+        count = count - 2;
+    if(s[0] == c && s[i - 1] != c)
         count--;
-    if(s[i - 1] == c)
+    if(s[0] != c && s[i - 1] == c)
         count--;
-    if(s[0] == c)
 }
 
-char    *get_item(char const *s, char c)
+unsigned int    *get_item_len(char const *s, char c, unsigned int i)
 {
-    unsigned int    count;
+	unsigned int    count;
+	unsigned int	j;
 
-    count = 0;
-    while(&s)
-    {
-        if(&s != c)
-        {
-            while(&s != c)
-            {
-                count++;
-                s++;
-            }
-            split[j] = constitue()
-            if ()
-                return();
-        }
-        s++;
-    }
-    return (NULL);
+	count = 0;
+	while(s[j] != c)
+	{
+		count++;
+                j++;
+	}
+         return (count);
 }
 
+char	*get_item(char const *s, char c, unsigned int *i)
+{
+	char	*item;
+	unsigned int	j;
+	
+	
+	item = (char *)malloc((get_item_len(s, c, i) + 1) * sizeof(char));
+	if(!item)
+		return (NULL);
+	j = 0;
+	while(j < get_item_len(s, c, i))
+	{
+		item[j] = s[*i + j];
+		*i++;
+		j++;
+	}
+	item[j] = '\0';
+	return (item);
+}
+
+void	remove_mem(char **split, unsigned int j)
+{
+	while(j > 0)
+	{
+		j--;
+		free(split[j]);
+	}
+	free(split);
+}
 
 char    **ft_split(char const *s, char c)
 {
     char    **split;
     unsigned int    count;
+    unsigned int    i;
     unsigned int    j;
     
     split = (char **)malloc((get_len(s, c) + 1) * sizeof(char*));
     if(!split)
         return (NULL);
+    i = 0;
     j = 0;
-    while(&s)
+    while(s[i])
     {
-        if(&s != c)
+        if(s[i] != c)
         {
-            count = 0;
-            while(&s != c)
+            split[j] = get_item(s, c, &i);
+            if (!split[j])
             {
-                count++;
-                s++;
+            	remove_mem(split, j);
+            	return (NULL);
             }
-            split[j] = constitue()
-            if ()
-                return();
+            j++;
         }
-        s++;
+        else
+        	i++;
     }
+    split[j] = NULL;
     return (split);
 }

@@ -61,6 +61,7 @@ void convert(int n, char *str, int* i)
         str[*i] = n % 10 + '0';
         *i++;  
     }
+    return;   
 }
 
 char    *ft_itoa(int n)
@@ -81,6 +82,6 @@ char    *ft_itoa(int n)
         i++;
         n = -n;
     }
-    convert(n, str, i);
+    convert(n, str, &i);
     return (str);
 }
