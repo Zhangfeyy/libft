@@ -9,16 +9,17 @@
 /*   Updated: 2025/04/23 12:40:03 by fzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
-char	*strrchr(const char	*s, int	c) {
-	char	*copy;
+#include "libft.h"
+char *strrchr(const char *s, int c)
+{
+	char *copy;
 
 	copy = NULL;
-	while(*s) {
-		if(*s == c)
+	while (*s)
+	{
+		if (*s == c)
 			copy = s;
 		s++;
 	}
 	return (copy);
 }
-

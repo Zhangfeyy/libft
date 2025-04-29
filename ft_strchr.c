@@ -9,13 +9,13 @@
 /*   Updated: 2025/04/23 12:33:03 by fzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
-
-char    *ft_strchr(const char *s, int c) {
-    while(*s) {
-	if(*s == c)
-		return (s);
-	s++;
-    }
-    return (s);
+char *ft_strchr(const char *s, int c)
+{
+	while (*s)
+	{
+		if (*s == c)
+			return (s);
+		s++;
+	}
+	return (s);
 }

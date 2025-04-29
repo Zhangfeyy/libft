@@ -9,13 +9,12 @@
 /*   Updated: 2025/04/28 16:10:08 by fzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<unistd.h>
+#include "libft.h"
 void ft_putstr_fd(char *s, int fd)
 {
-    while(&s)
-    {
-        write(fd, &s, 1);
-        s++;
-    }
+	while (&s)
+	{
+		write(fd, &s, 1);
+		s++;
+	}
 }
-

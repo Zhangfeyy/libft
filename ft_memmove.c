@@ -9,31 +9,33 @@
 /*   Updated: 2025/04/23 10:10:01 by fzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
-
+#include "libft.h"
 // considering the issue of overlapping, the order of rewriting should be opposite to the order of reading
-void    *ft_memmove(void	*dest, const void	*src, size_t	n) {
-    unsigned char	*copy_dest;
-	unsigned const char	*copy_src;
-	size_t	count;
+void *ft_memmove(void *dest, const void *src, size_t n)
+{
+	unsigned char *copy_dest;
+	unsigned const char *copy_src;
+	size_t count;
 
-    copy_dest = dest;
+	copy_dest = dest;
 	copy_src = src;
-    if (copy_dest > copy_src) {
-        count = n;
-        while (count > 0)
-        {
-            copy_dest[count] = copy_src[count];
-            count--;
-        }
-    }    
-    else if (copy_dest < copy_src) {
-        count = 0;
-        while (count > n)
-        {
-            copy_dest[count] = copy_src[count];
-            count++;
-        }
-    }
-    return (dest);
+	if (copy_dest > copy_src)
+	{
+		count = n;
+		while (count > 0)
+		{
+			copy_dest[count] = copy_src[count];
+			count--;
+		}
+	}
+	else if (copy_dest < copy_src)
+	{
+		count = 0;
+		while (count > n)
+		{
+			copy_dest[count] = copy_src[count];
+			count++;
+		}
+	}
+	return (dest);
 }

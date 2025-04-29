@@ -9,28 +9,27 @@
 /*   Updated: 2025/04/23 11:44:52 by fzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
+#include "libft.h"
+unsigned int strlcpy(char *dst, const char *src, size_t size)
+{
+	unsigned int i;
+	unsigned int j;
 
-unsigned int    strlcpy(char *dst, const char *src, size_t size) {
-    unsigned int    i;
-    unsigned int    j;
-
-    i = 0;
-    j = 0;
-    while(src[j] != '\0')
-    {
-        j++;
-    }
-    while ((i < size) && !src[i])
-    {
-        dst[i] = src[i];
-        i++;
-    }
-    while (i < size)
-    {
-        dst[i] = '\0';
-        i++;
-    }
-    return (j);
+	i = 0;
+	j = 0;
+	while (src[j] != '\0')
+	{
+		j++;
+	}
+	while ((i < size) && !src[i])
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	while (i < size)
+	{
+		dst[i] = '\0';
+		i++;
+	}
+	return (j);
 }
-

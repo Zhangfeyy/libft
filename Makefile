@@ -5,7 +5,7 @@ OBJS = $(SRCS:.c=.o)
 BONUS_SRCS = $(filter %bonus%, $(wildcard *.c))
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
-CC = gcc
+CC = cc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror -I # also find header files in the current dir for local header files
 NAME = libft.a
@@ -24,7 +24,7 @@ fclean:clean
 
 re: fclean $(NAME)
 
-bonus: $(OBJS) $(BONUS_OBJS)
-	ar rcs $(NAME) $^
+bonus: re $(OBJS) $(BONUS_OBJS)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 .PHONY:all clean fclean re bonus

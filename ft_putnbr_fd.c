@@ -9,27 +9,27 @@
 /*   Updated: 2025/04/28 15:45:31 by fzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-# include <unistd.h>
-void	output(int n, int fd)
+#include "libft.h"
+void output(int n, int fd)
 {
-	char	c;
+	char c;
 	c = '0' + n;
 	write(fd, &c, 1);
 }
 
-void	ft_putnbr_fd(int n, int fd)
+void ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
 	{
 		write(fd, "-2147483648", 11);
-		return ;
+		return;
 	}
 	if (n < 0)
 	{
 		write(fd, "-", 1);
 		n = -n;
 	}
-	if(n / 10 == 0)
+	if (n / 10 == 0)
 		output(n % 10, fd);
 	else
 	{

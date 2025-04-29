@@ -9,14 +9,13 @@
 /*   Updated: 2025/04/28 15:59:15 by fzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-# include<unistd.h>
-
-void    ft_putendl_fd(char *s, int fd)
+#include "libft.h"
+void ft_putendl_fd(char *s, int fd)
 {
-    while(&s)
-    {
-        write(fd, &s, 1);
-        s++;
-    }
-    write(fd, '\n', 1);
+	while (&s)
+	{
+		write(fd, &s, 1);
+		s++;
+	}
+	write(fd, '\n', 1);
 }

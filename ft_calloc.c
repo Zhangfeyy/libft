@@ -9,15 +9,14 @@
 /*   Updated: 2025/04/23 13:09:02 by fzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
-
-//If nmemb or size is 0, then calloc() returns a unique pointer value that can be successfully passed to free().
-void    *ft_calloc(size_t nmemb, size_t   size)
+#include "libft.h"
+// If nmemb or size is 0, then calloc() returns a unique pointer value that can be successfully passed to free().
+void *ft_calloc(size_t nmemb, size_t size)
 {
-    unsigned    char *  copy;
+	unsigned char *copy;
 
-    copy = (void *)malloc(nmemb * size);
-    if (!copy)
-        return (NULL);
-    return (copy);
+	copy = (void *)malloc(nmemb * size);
+	if (!copy)
+		return (NULL);
+	return (copy);
 }

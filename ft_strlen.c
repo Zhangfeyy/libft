@@ -9,12 +9,11 @@
 /*   Updated: 2025/04/23 10:06:13 by fzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_strlen(char	*str)
+int ft_strlen(char *str)
 {
-	int	len;
+	int len;
 	len = 0;
-	while(*str != '\0')
+	while (*str != '\0')
 	{
 		len++;
 		str++;
