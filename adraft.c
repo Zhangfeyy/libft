@@ -33,7 +33,7 @@ int ft_lstsize(t_list *lst)
     while (!temp)
     {
         count++;
-        temp = temp->next;
+        temp = temp->next;    t_list *beg;
     }
     return (count);
 }
@@ -101,10 +101,7 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
     t_list *temp_old;
     t_list *temp_new;
     t_list *new;
-
-    temp_old = lst;
-    new = ft_lstnew(f(temp_old->content));
-    if(!new)
+    t_list *beg;
         return(NULL);
     temp_new = new;
     temp_old = temp_old->next;
@@ -120,4 +117,5 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
         temp_new = temp_new->next;
         temp_old = temp_old->next;
     }
+    return(new);
 }
