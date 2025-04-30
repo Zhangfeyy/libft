@@ -22,7 +22,7 @@ char	*strrchr(const char *s, int c)
 			copy = s;
 		s++;
 	}
-	if(c == *s)
+	if (c == *s)
 		copy = s;
 	return (copy);
 }

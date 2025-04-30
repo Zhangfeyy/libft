@@ -9,5 +9,10 @@
 /*   Updated: 2025/04/30 20:28:11 by fzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	new->next = *lst;
+	*lst = new;
+}

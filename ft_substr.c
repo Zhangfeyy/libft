@@ -10,10 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-char *ft_substr(char const *s, unsigned int start, size_t len)
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *sub;
-	unsigned int i;
+	unsigned int	i;
+	char			*sub;
 
 	i = 0;
 	while (s[start + i])
