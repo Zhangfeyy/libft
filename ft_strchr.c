@@ -9,7 +9,7 @@
 /*   Updated: 2025/04/23 12:33:03 by fzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{

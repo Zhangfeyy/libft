@@ -10,9 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-char *strrchr(const char *s, int c)
+
+char	*strrchr(const char *s, int c)
 {
-	char *copy;
+	char	*copy;
 
 	copy = NULL;
 	while (*s)

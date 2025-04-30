@@ -10,13 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-// If nmemb or size is 0, then calloc() returns a unique pointer value that can be successfully passed to free().
-void *ft_calloc(size_t nmemb, size_t size)
+// If nmemb or size is 0, then calloc() returns a unique pointer value 
+//that can be successfully passed to free().
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	unsigned char *copy;
+	unsigned char	*copy;
 
 	copy = (void *)malloc(nmemb * size);
 	if (!copy)
 		return (NULL);
+	ft_bzero(copy, nmemb * size);
 	return (copy);
 }

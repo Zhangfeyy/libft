@@ -10,10 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-unsigned int strlcpy(char *dst, const char *src, size_t size)
+
+size_t	strlcpy(char *dst, const char *src, size_t size)
 {
-	unsigned int i;
-	unsigned int j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
@@ -21,7 +22,7 @@ unsigned int strlcpy(char *dst, const char *src, size_t size)
 	{
 		j++;
 	}
-	while ((i < size) && !src[i])
+	while ((i < size - 1) && src[i])
 	{
 		dst[i] = src[i];
 		i++;

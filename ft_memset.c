@@ -12,11 +12,11 @@
 #include "libft.h"
 // void *: generic pointer, not pointing to any specific data type.
 // Therefore void* cannot be dereferenced and indexed!
-void *memset(void *s, int c, size_t n)
+// cast to unsigned char* to access memory 'byte by byte'
+void	*memset(void *s, int c, size_t n)
 {
-	// cast to unsigned char* to access memory 'byte by byte'
-	unsigned char *copy;
-	size_t count;
+	size_t			count;
+	unsigned char	*copy;
 
 	copy = s;
 	count = 0;
@@ -25,5 +25,5 @@ void *memset(void *s, int c, size_t n)
 		copy[count] = c;
 		count++;
 	}
-	return s;
+	return (s);
 }

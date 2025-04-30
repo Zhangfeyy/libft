@@ -10,27 +10,27 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-char *strnstr(const char *big, const char *little, size_t len)
-{
-	int inner_count;
-	int swi;
 
-	while (!*big)
+char	*strnstr(const char *big, const char *little, size_t len)
+{
+	size_t	inner_count;
+	size_t	outer_count;
+
+	if (!*little)
+		return (big);
+	outer_count = 0;
+	while (big[outer_count] && outer_count < len)
 	{
-		inner_count = 0;
-		if (*big == little[inner_count] || !little[inner_count])
+		if (big[outer_count] == little[0])
 		{
-			swi = 1;
-			while (little[inner_count] && (inner_count <= len) && swi)
-			{
-				if (*big != little[inner_count])
-					swi = 0;
+			inner_count = 0;
+			while (little[inner_count] == big[outer_count + inner_count]
+				&& (outer_count + inner_count < len) && little[inner_count])
 				inner_count++;
-			}
+			if (!little[inner_count])
+				return ((char *)&big[outer_count]);
 		}
-		if (swi)
-			return (big);
-		big++;
+		outer_count++;
 	}
 	return (NULL);
 }

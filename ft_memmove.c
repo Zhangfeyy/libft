@@ -10,12 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-// considering the issue of overlapping, the order of rewriting should be opposite to the order of reading
-void *ft_memmove(void *dest, const void *src, size_t n)
+// considering the issue of overlapping, 
+//the order of rewriting should be opposite to the order of reading
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char *copy_dest;
-	unsigned const char *copy_src;
-	size_t count;
+	unsigned char		*copy_dest;
+	const unsigned char	*copy_src;
+	size_t				count;
 
 	copy_dest = dest;
 	copy_src = src;
@@ -24,11 +25,11 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 		count = n;
 		while (count > 0)
 		{
-			copy_dest[count] = copy_src[count];
 			count--;
+			copy_dest[count] = copy_src[count];
 		}
 	}
-	else if (copy_dest < copy_src)
+	else if (copy_dest <= copy_src)
 	{
 		count = 0;
 		while (count > n)
