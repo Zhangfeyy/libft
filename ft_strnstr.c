@@ -13,15 +13,20 @@
 char *strnstr(const char *big, const char *little, size_t len)
 {
 	int inner_count;
+	int outer_count;
 	int swi;
 
-	while (!*big)
+	//edge cases
+	if(!*little)
+		return (big);
+	
+	while (*big)
 	{
 		inner_count = 0;
-		if (*big == little[inner_count] || !little[inner_count])
+		if (*big == little[inner_count] || little[inner_count])
 		{
 			swi = 1;
-			while (little[inner_count] && (inner_count <= len) && swi)
+			while (little[inner_count] && (inner_count < len) && swi)
 			{
 				if (*big != little[inner_count])
 					swi = 0;

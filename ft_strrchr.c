@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+//the c may be '\0'(ASCII 0), and the f should return a pointer to NULL(terminal) but valid
 char *strrchr(const char *s, int c)
 {
 	char *copy;
@@ -21,5 +22,7 @@ char *strrchr(const char *s, int c)
 			copy = s;
 		s++;
 	}
+	if(c == *s)
+		copy = s;
 	return (copy);
 }
