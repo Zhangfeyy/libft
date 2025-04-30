@@ -9,15 +9,16 @@
 /*   Updated: 2025/04/28 16:19:55 by fzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-void ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int n;
+	unsigned int	n;
 
 	n = 0;
-	while (&s)
+	while (s[n])
 	{
-		f(n, s);
+		f(n, &s[n]);
 		n++;
-		s++;
 	}
+	if (!s[n])
+		f(n, &s[n]);
 }

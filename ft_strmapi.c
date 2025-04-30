@@ -10,34 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-unsigned int get_len(char const *s)
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int n;
+	unsigned int	n;
+	char			*ns;
 
-	n = 0;
-	while (s[n])
-	{
-		n++;
-	}
-	return (n);
-}
-
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
-{
-	unsigned int n;
-	unsigned int len;
-	char *ns;
-
-	ns = (char *)malloc((get_len(s) + 1) * sizeof(char));
+	ns = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!ns)
 		return (NULL);
 	n = 0;
-	while (&s)
+	while (s[n])
 	{
-		ns[n] = f(n, s);
+		ns[n] = f(n, s[n]);
 		n++;
-		s++;
 	}
-	ns[n] = '\0';
+	if (n == 0)
+		ns[n] = f(n, s[n]);
+	else
+		ns[n] = '\0';
 	return (ns);
 }

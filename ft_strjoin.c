@@ -10,25 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-unsigned int get_len(char const *s)
+//It's generally a good practice to use size_t for indexing and counting
+
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned int i;
+	unsigned int	i;
+	unsigned int	j;
+	char			*join;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-
-char *ft_strjoin(char const *s1, char const *s2)
-{
-	unsigned int i;
-	unsigned int j;
-	char *join;
-
-	i = get_len(s1);
-	j = get_len(s2);
-	join = (char *)malloc((i + j + 1) * sizeof(char));
+	join = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	if (!join)
 		return (NULL);
 	i = 0;
@@ -40,7 +30,7 @@ char *ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	while (s2[j])
 	{
-		join[i + j - 1] = s2[j];
+		join[i + j] = s2[j];
 		j++;
 	}
 	join[i + j] = '\0';

@@ -10,57 +10,47 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-unsigned int get_len(char const *s, char c)
+
+size_t	get_len(char const *s, char c)
 {
-	unsigned int i;
-	unsigned int count;
-	int swi;
+	size_t	i;
+	size_t	count;
 
 	i = 0;
-	count = 1;
+	count = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] != c)
 		{
-			while (s[i] == c)
+			//also control the boundary in the loop structure
+			while (s[i] != c && s[i])
 				i++;
 			count++;
 		}
 		else
 			i++;
 	}
-	if (s[0] == c && s[i - 1] == c)
-		count = count - 2;
-	if (s[0] == c && s[i - 1] != c)
-		count--;
-	if (s[0] != c && s[i - 1] == c)
-		count--;
-}
-
-unsigned int get_item_len(char const *s, char c, unsigned int i)
-{
-	unsigned int count;
-	unsigned int j;
-
-	count = 0;
-	while (s[j] != c)
-	{
-		count++;
-		j++;
-	}
 	return (count);
 }
 
-char *get_item(char const *s, char c, unsigned int *i)
+char	*get_item(char const *s, char c, size_t *i)
 {
-	char *item;
-	unsigned int j;
+	char	*item;
+	size_t	j;
+	size_t	len;
 
-	item = (char *)malloc((get_item_len(s, c, i) + 1) * sizeof(char));
+	len = 0;
+	j = *i;
+	while (s[j] != c)
+	{
+		len++;
+		j++;
+	}
+	item = (char *)malloc(len + 1) * sizeof(char));
 	if (!item)
 		return (NULL);
 	j = 0;
-	while (j < get_item_len(s, c, i))
+	while (j < len)
 	{
 		item[j] = s[*i + j];
 		*i++;
@@ -70,26 +60,21 @@ char *get_item(char const *s, char c, unsigned int *i)
 	return (item);
 }
 
-void remove_mem(char **split, unsigned int j)
+void	remove_mem(char **split, size_t j)
 {
-	while (j > 0)
+	while (j >= 0)
 	{
-		j--;
 		free(split[j]);
+		j--;
 	}
 	free(split);
 }
 
-char **ft_split(char const *s, char c)
+char	**fillin_split(char const *s, char c, char **split)
 {
-	char **split;
-	unsigned int count;
-	unsigned int i;
-	unsigned int j;
+	size_t	i;
+	size_t	j;
 
-	split = (char **)malloc((get_len(s, c) + 1) * sizeof(char *));
-	if (!split)
-		return (NULL);
 	i = 0;
 	j = 0;
 	while (s[i])
@@ -108,5 +93,17 @@ char **ft_split(char const *s, char c)
 			i++;
 	}
 	split[j] = NULL;
+	return (split);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**split;
+
+	split = (char **)malloc((get_len(s, c) + 1) * sizeof(char *));
+	if (!split)
+		return (NULL);
+	if (!fillin_split(s, c, split))
+		return (NULL);
 	return (split);
 }

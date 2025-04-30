@@ -10,9 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-int check_set(char c, char const *set)
+//iterate a string from the end to the start with acondition control!
+//it does not have a '/0' buffer
+int	check_set(char c, char const *set)
 {
-	unsigned int i;
+	size_t	i;
+
+	i = 0;
 	while (set[i])
 	{
 		if (set[i] == c)
@@ -22,41 +26,45 @@ int check_set(char c, char const *set)
 	return (0);
 }
 
-unsigned int get_len(char const *s1, char const *set)
+size_t	get_start(char const *s1, char const *set)
 {
-	unsigned int j;
-	unsigned int k;
+	size_t	start_count;
 
-	j = 0;
-	k = 0;
-	while (s1[j])
-	{
-		if (check_set(s1[j], set))
-			k++;
-		j++;
-	}
-	return (j - k);
+	start_count = 0;
+	while (check_set(s1[start_count], set))
+		start_count++;
+	return (start_count);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+size_t	get_end(char const *s1, char const *set)
 {
-	char *trimmed;
-	unsigned int i;
-	unsigned int j;
+	size_t	len;
+	size_t	end_count;
 
-	trimmed = (char *)malloc((get_len(s1, set) + 1) * sizeof(char));
-	if (trimmed)
+	len = ft_strlen(s1);
+	end_count = 0;
+	while (end_count < len && check_set(s1[len - end_count - 1], set))
+		end_count++;
+	return (end_count);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	char	*trimmed;
+	size_t	i_s;
+	size_t	i_e;
+	size_t	i;
+
+	i_s = get_start(s1, set);
+	i_e = get_end(s1, set);
+	trimmed = (char *)malloc((ft_strlen(s1) -i_s - i_e + 1) * sizeof(char));
+	if (!trimmed)
 		return (NULL);
 	i = 0;
-	j = 0;
-	while (s1[j])
+	while ((i_s + i) < (ft_strlen(s1) - i_e))
 	{
-		if (!check_set(s1[j], set))
-		{
-			trimmed[i] = s1[j];
-			i++;
-		}
-		j++;
+		trimmed[i] = s1[i + i_s];
+		i++;
 	}
 	trimmed[i] = '\0';
 	return (trimmed);

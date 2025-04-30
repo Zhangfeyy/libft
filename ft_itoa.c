@@ -10,11 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-char *str_limit()
+
+char	*str_limit(void)
 {
-	char *ns;
-	char *limit;
-	int n;
+	char	*ns;
+	char	*limit;
+	int		n;
 
 	limit = "-2147483648";
 	ns = (char *)malloc(12);
@@ -27,11 +28,12 @@ char *str_limit()
 		n++;
 	}
 	ns[n] = '\0';
+	return (ns);
 }
 
-int get_len(int n)
+int	get_len(int n)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	if (n < 0)
@@ -47,26 +49,25 @@ int get_len(int n)
 	return (i);
 }
 
-void convert(int n, char *str, int *i)
+void	convert(int n, char *str, int *i)
 {
 	if (n / 10 != 0)
 	{
 		convert(n / 10, str, i);
 		str[*i] = n % 10 + '0';
-		*i++;
+		(*i)++;
 	}
 	else
 	{
 		str[*i] = n % 10 + '0';
-		*i++;
+		(*i)++;
 	}
-	return;
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char *str;
-	int i;
+	char	*str;
+	int		i;
 
 	if (n == -2147483648)
 	{
@@ -75,6 +76,7 @@ char *ft_itoa(int n)
 	str = (char *)malloc((get_len(n) + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
+	i = 0;
 	if (n < 0)
 	{
 		str[i] = '-';
