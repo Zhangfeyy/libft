@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-//the c may be '\0'(ASCII 0), and the f should return a pointer to NULL(terminal) but valid
-char *strrchr(const char *s, int c)
+
+char	*strrchr(const char *s, int c)
 {
-	char *copy;
+	char	*copy;
 
 	copy = NULL;
 	while (*s)

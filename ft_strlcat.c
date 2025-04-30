@@ -10,30 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-unsigned int ft_strlcat(char *dst, const char *src, size_t size)
+
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned int i;
-	unsigned int j;
-	unsigned int k;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
-	j = 0;
-	while (!dst[j])
+	j = ft_strlen(dst);
+	while ((i < (size - j - 1)) && src[i])
 	{
-		j++;
-	}
-	while ((i < size) && (!src[i]))
-	{
-		dst[j] = src[i];
-		j++;
+		dst[j + i] = src[i];
 		i++;
 	}
-	k = j;
-	while (i < size)
-	{
-		dst[j] = '\0';
-		j++;
-		i++;
-	}
-	return (k);
+	if (j + i < size)
+		dst[j + i] = '\0';
+	return (j + ft_strlen(src));
 }

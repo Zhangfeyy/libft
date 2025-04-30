@@ -10,10 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-char *ft_strndup(const char *s, size_t n)
+
+char	*ft_strndup(const char *s, size_t n)
 {
-	int count;
-	char *copy;
+	size_t	count;
+	char	*copy;
 
 	count = 0;
 	while (s[count])
