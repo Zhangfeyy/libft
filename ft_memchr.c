@@ -10,13 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
+//Type conversion is needed
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*copy;
 	size_t			i;
 
-	copy = s;
+	copy = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{

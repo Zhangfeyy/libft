@@ -7,10 +7,12 @@ BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 CC = cc
 RM = rm -f
-CFLAGS = -Wall -Wextra -Werror -I # also find header files in the current dir for local header files
+# also find header files in the current dir for local header files
+CFLAGS = -Wall -Wextra -Werror -I. 
 NAME = libft.a
 
-all:$(NAME) #all is to set the default target
+#all is to set the default target
+all:$(NAME) 
 
 $(NAME):$(OBJS)
 	ar rcs $@ $^

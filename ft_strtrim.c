@@ -41,7 +41,7 @@ size_t	get_end(char const *s1, char const *set)
 	size_t	len;
 	size_t	end_count;
 
-	len = ft_strlen(s1);
+	len = ft_strlen((char *)s1);
 	end_count = 0;
 	while (end_count < len && check_set(s1[len - end_count - 1], set))
 		end_count++;
@@ -57,11 +57,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i_s = get_start(s1, set);
 	i_e = get_end(s1, set);
-	trimmed = (char *)malloc((ft_strlen(s1) -i_s - i_e + 1) * sizeof(char));
+	trimmed = (char *)malloc((ft_strlen((char *)s1) -i_s - i_e + 1) * sizeof(char));
 	if (!trimmed)
 		return (NULL);
 	i = 0;
-	while ((i_s + i) < (ft_strlen(s1) - i_e))
+	while ((i_s + i) < (ft_strlen((char *)s1) - i_e))
 	{
 		trimmed[i] = s1[i + i_s];
 		i++;

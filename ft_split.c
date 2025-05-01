@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
+//also control the boundary in the loop structure
 size_t	get_len(char const *s, char c)
 {
 	size_t	i;
@@ -22,7 +23,6 @@ size_t	get_len(char const *s, char c)
 	{
 		if (s[i] != c)
 		{
-			//also control the boundary in the loop structure
 			while (s[i] != c && s[i])
 				i++;
 			count++;
@@ -46,14 +46,14 @@ char	*get_item(char const *s, char c, size_t *i)
 		len++;
 		j++;
 	}
-	item = (char *)malloc(len + 1) * sizeof(char));
+	item = (char *)malloc((len + 1) * sizeof(char));
 	if (!item)
 		return (NULL);
 	j = 0;
 	while (j < len)
 	{
 		item[j] = s[*i + j];
-		*i++;
+		(*i)++;
 		j++;
 	}
 	item[j] = '\0';

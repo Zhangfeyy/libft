@@ -11,13 +11,13 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	inner_count;
 	size_t	outer_count;
 
 	if (!*little)
-		return (big);
+		return ((char *)big);
 	outer_count = 0;
 	while (big[outer_count] && outer_count < len)
 	{

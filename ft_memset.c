@@ -13,7 +13,7 @@
 // void *: generic pointer, not pointing to any specific data type.
 // Therefore void* cannot be dereferenced and indexed!
 // cast to unsigned char* to access memory 'byte by byte'
-void	*memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t			count;
 	unsigned char	*copy;

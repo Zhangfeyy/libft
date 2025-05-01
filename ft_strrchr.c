@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	*copy;
 
@@ -19,10 +19,10 @@ char	*strrchr(const char *s, int c)
 	while (*s)
 	{
 		if (*s == c)
-			copy = s;
+			copy = (char *)s;
 		s++;
 	}
 	if (c == *s)
-		copy = s;
+		copy = (char *)s;
 	return (copy);
 }

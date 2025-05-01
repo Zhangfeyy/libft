@@ -11,21 +11,17 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_strndup(const char *s, size_t n)
+char	*ft_strdup(const char *s)
+
 {
 	size_t	count;
 	char	*copy;
 
-	count = 0;
-	while (s[count])
-		count++;
-	if (count > n)
-		count = n;
-	copy = (char *)malloc((count + 1) * sizeof(char));
+	copy = (char *)malloc((ft_strlen((char *)s)) * sizeof(char));
 	if (!copy)
 		return (NULL);
 	count = 0;
-	while (count < n && s[count])
+	while (s[count])
 	{
 		copy[count] = s[count];
 		count++;
