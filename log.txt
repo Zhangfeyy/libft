@@ -4,13 +4,13 @@ ft_isalpha	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK
 ft_isdigit	: 1.OK 2.OK 3.OK 4.OK 
 ft_isalnum	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 
 ft_isascii	: 1.OK 2.OK 3.OK 4.OK 
-ft_isprint	: 1.KO 2.OK 3.OK 4.OK 
+ft_isprint	: 1.KO 2.OK 3.OK 4.OK 修复
 ft_toupper	: 1.OK 2.OK 3.OK 4.OK 
 ft_tolower	: 1.OK 2.OK 3.OK 4.OK 
-ft_strchr	: 1.OK 2.OK 3.KO 4.OK 5.KO 
-ft_strrchr	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.KO 7.OK 8.OK 
+ft_strchr	: 1.OK 2.OK 3.KO 4.OK 5.KO 修复
+ft_strrchr	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.KO 7.OK 8.OK 修复
 ft_strncmp	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 
-ft_strlcpy	: 1.KO 2.KO 3.KO ==49718== Invalid write of size 1
+ft_strlcpy	: 1.KO 2.KO 3.KO ==49718== Invalid write of size 1 
 ==49718==    at 0x404FFC: ft_strlcpy (in /home/fzhang/github/libft/Tester/a.out)
 ==49718==    by 0x404B25: main (ft_strlcpy_test.cpp:24)
 ==49718==  Address 0x1fff001000 is not stack'd, malloc'd or (recently) free'd
