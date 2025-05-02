@@ -27,10 +27,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (ft_strlen(src));
 }
+// int	main()
+// {
+//	char src[] = "coucou";
+//	char dest[10]; memset(dest, 'A', 10);
+//	/* 1 */ int check = ft_strlcpy(dest, src, 1) == strlen(src) && dest[0] == 0 && dest[1] == 'A';
+// }
 
-int	main()
-{
-	char src[] = "coucou";
-	char dest[10]; memset(dest, 'A', 10);
-	/* 1 */ int check = ft_strlcpy(dest, src, 1) == strlen(src) && dest[0] == 0 && dest[1] == 'A';
-}

@@ -1,201 +1,208 @@
-2 warnings generated.
+If all your tests are OK and the moulinette KO you, please run the tester with valgrind (see README)
+make -C /home/fzhang/github/libft
+make[1]: Entering directory '/home/fzhang/github/libft'
+cc -Wall -Wextra -Werror -I.    -c -o ft_strrchr.o ft_strrchr.c
+ar rcs libft.a ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_itoa.o ft_lstadd_back_bonus.o ft_lstadd_front_bonus.o ft_lstclear_bonus.o ft_lstdelone_bonus.o ft_lstiter_bonus.o ft_lstlast_bonus.o ft_lstmap_bonus.o ft_lstnew_bonus.o ft_lstsize_bonus.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_split.o ft_strchr.o ft_strdup.o ft_striteri.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strmapi.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o
+make[1]: Leaving directory '/home/fzhang/github/libft'
+[Mandatory]
+ft_memset	: 1.OK 2.OK 
+ft_bzero	: 1.OK 2.OK 3.OK 
+ft_memcpy	: 1.OK 2.OK 3.OK 
+ft_memmove	: 1.OK 2.OK 3.OK 4.OK 
+ft_memchr	: 1.OK 2.OK 3.OK 4.OK 5.OK 
+ft_memcmp	: 1.OK 2.OK 3.OK 4.OK 5.OK 
 ft_strlen	: 1.OK 2.OK 
 ft_isalpha	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 
 ft_isdigit	: 1.OK 2.OK 3.OK 4.OK 
 ft_isalnum	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 
 ft_isascii	: 1.OK 2.OK 3.OK 4.OK 
-ft_isprint	: 1.KO 2.OK 3.OK 4.OK 修复
+ft_isprint	: 1.OK 2.OK 3.OK 4.OK 
 ft_toupper	: 1.OK 2.OK 3.OK 4.OK 
 ft_tolower	: 1.OK 2.OK 3.OK 4.OK 
-ft_strchr	: 1.OK 2.OK 3.KO 4.OK 5.KO 修复
-ft_strrchr	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.KO 7.OK 8.OK 修复
+ft_strchr	: 1.OK 2.OK 3.OK 4.OK 5.OK 
+ft_strrchr	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 
 ft_strncmp	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 
-ft_strlcpy	: 1.KO 2.KO 3.KO ==49718== Invalid write of size 1 
-==49718==    at 0x404FFC: ft_strlcpy (in /home/fzhang/github/libft/Tester/a.out)
-==49718==    by 0x404B25: main (ft_strlcpy_test.cpp:24)
-==49718==  Address 0x1fff001000 is not stack'd, malloc'd or (recently) free'd
-==49718== 
-4.SIGSEGV
+ft_strlcpy	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 
 ft_strlcat	: 1.KO 2.KO 3.KO 4.KO 5.KO 6.KO 7.OK 8.KO 9.KO 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 17.KO 
 ft_strnstr	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 
 ft_atoi		: 1.OK 2.OK 3.KO 4.KO 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.KO 13.KO 14.OK 15.OK 16.OK 17.OK 
-ft_calloc	: 1.OK 2.MOK 3.KO 4.OK 5.OK 6.OK 7.OK 8.OK 9.KO 10.OK 11.OK ==49774== Argument 'size' of function malloc has a fishy (possibly negative) value: -15
-==49774==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==49774==    by 0x404C4D: ft_calloc (in /home/fzhang/github/libft/Tester/a.out)
-==49774==    by 0x404B4E: main (ft_calloc_test.cpp:43)
-==49774== 
-12.OK ==49774== Argument 'size' of function malloc has a fishy (possibly negative) value: -15
-==49774==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==49774==    by 0x404C4D: ft_calloc (in /home/fzhang/github/libft/Tester/a.out)
-==49774==    by 0x404B76: main (ft_calloc_test.cpp:44)
-==49774== 
+ft_calloc	: 1.OK 2.MOK 3.KO 4.OK 5.OK 6.OK 7.OK 8.OK 9.KO 10.OK 11.OK ==77945== Argument 'size' of function malloc has a fishy (possibly negative) value: -15
+==77945==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77945==    by 0x404C4D: ft_calloc (in /home/fzhang/github/libft/Tester/a.out)
+==77945==    by 0x404B4E: main (ft_calloc_test.cpp:43)
+==77945== 
+12.OK ==77945== Argument 'size' of function malloc has a fishy (possibly negative) value: -15
+==77945==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77945==    by 0x404C4D: ft_calloc (in /home/fzhang/github/libft/Tester/a.out)
+==77945==    by 0x404B76: main (ft_calloc_test.cpp:44)
+==77945== 
 13.OK 
-==49774== 1 bytes in 1 blocks are definitely lost in loss record 1 of 2
-==49774==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==49774==    by 0x404C4D: ft_calloc (in /home/fzhang/github/libft/Tester/a.out)
-==49774==    by 0x40498D: main (ft_calloc_test.cpp:24)
-==49774== 
-==49774== 25 bytes in 1 blocks are definitely lost in loss record 2 of 2
-==49774==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==49774==    by 0x404C4D: ft_calloc (in /home/fzhang/github/libft/Tester/a.out)
-==49774==    by 0x404AAA: main (ft_calloc_test.cpp:38)
-==49774== 
-ft_strdup	: ==49788== Invalid write of size 1
-==49788==    at 0x404AE6: ft_strdup (in /home/fzhang/github/libft/Tester/a.out)
-==49788==    by 0x404917: main (ft_strdup_test.cpp:19)
-==49788==  Address 0x4de3f96 is 0 bytes after a block of size 6 alloc'd
-==49788==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==49788==    by 0x404A80: ft_strdup (in /home/fzhang/github/libft/Tester/a.out)
-==49788==    by 0x404917: main (ft_strdup_test.cpp:19)
-==49788== 
-==49788== Invalid read of size 1
-==49788==    at 0x484FBE8: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==49788==    by 0x40492F: main (ft_strdup_test.cpp:20)
-==49788==  Address 0x4de3f96 is 0 bytes after a block of size 6 alloc'd
-==49788==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==49788==    by 0x404A80: ft_strdup (in /home/fzhang/github/libft/Tester/a.out)
-==49788==    by 0x404917: main (ft_strdup_test.cpp:19)
-==49788== 
-1.OK 2.MKO ==49788== Invalid write of size 1
-==49788==    at 0x404AE6: ft_strdup (in /home/fzhang/github/libft/Tester/a.out)
-==49788==    by 0x404973: main (ft_strdup_test.cpp:23)
-==49788==  Address 0x4de4030 is 0 bytes after a block of size 0 alloc'd
-==49788==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==49788==    by 0x404A80: ft_strdup (in /home/fzhang/github/libft/Tester/a.out)
-==49788==    by 0x404973: main (ft_strdup_test.cpp:23)
-==49788== 
-==49788== Invalid read of size 1
-==49788==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==49788==    by 0x40498B: main (ft_strdup_test.cpp:24)
-==49788==  Address 0x4de4030 is 0 bytes after a block of size 0 alloc'd
-==49788==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==49788==    by 0x404A80: ft_strdup (in /home/fzhang/github/libft/Tester/a.out)
-==49788==    by 0x404973: main (ft_strdup_test.cpp:23)
-==49788== 
+==77945== 1 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==77945==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77945==    by 0x404C4D: ft_calloc (in /home/fzhang/github/libft/Tester/a.out)
+==77945==    by 0x40498D: main (ft_calloc_test.cpp:24)
+==77945== 
+==77945== 25 bytes in 1 blocks are definitely lost in loss record 2 of 2
+==77945==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77945==    by 0x404C4D: ft_calloc (in /home/fzhang/github/libft/Tester/a.out)
+==77945==    by 0x404AAA: main (ft_calloc_test.cpp:38)
+==77945== 
+ft_strdup	: ==77959== Invalid write of size 1
+==77959==    at 0x404AE6: ft_strdup (in /home/fzhang/github/libft/Tester/a.out)
+==77959==    by 0x404917: main (ft_strdup_test.cpp:19)
+==77959==  Address 0x4de3f96 is 0 bytes after a block of size 6 alloc'd
+==77959==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77959==    by 0x404A80: ft_strdup (in /home/fzhang/github/libft/Tester/a.out)
+==77959==    by 0x404917: main (ft_strdup_test.cpp:19)
+==77959== 
+==77959== Invalid read of size 1
+==77959==    at 0x484FBE8: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77959==    by 0x40492F: main (ft_strdup_test.cpp:20)
+==77959==  Address 0x4de3f96 is 0 bytes after a block of size 6 alloc'd
+==77959==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77959==    by 0x404A80: ft_strdup (in /home/fzhang/github/libft/Tester/a.out)
+==77959==    by 0x404917: main (ft_strdup_test.cpp:19)
+==77959== 
+1.OK 2.MKO ==77959== Invalid write of size 1
+==77959==    at 0x404AE6: ft_strdup (in /home/fzhang/github/libft/Tester/a.out)
+==77959==    by 0x404973: main (ft_strdup_test.cpp:23)
+==77959==  Address 0x4de4030 is 0 bytes after a block of size 0 alloc'd
+==77959==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77959==    by 0x404A80: ft_strdup (in /home/fzhang/github/libft/Tester/a.out)
+==77959==    by 0x404973: main (ft_strdup_test.cpp:23)
+==77959== 
+==77959== Invalid read of size 1
+==77959==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77959==    by 0x40498B: main (ft_strdup_test.cpp:24)
+==77959==  Address 0x4de4030 is 0 bytes after a block of size 0 alloc'd
+==77959==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77959==    by 0x404A80: ft_strdup (in /home/fzhang/github/libft/Tester/a.out)
+==77959==    by 0x404973: main (ft_strdup_test.cpp:23)
+==77959== 
 3.OK 4.MKO 
-ft_substr	: 1.OK 2.MOK 3.OK 4.MOK 5.KO 6.MKO ==49802== Invalid read of size 1
-==49802==    at 0x404D46: ft_substr (in /home/fzhang/github/libft/Tester/a.out)
-==49802==    by 0x404A73: main (ft_substr_test.cpp:32)
-==49802==  Address 0x4de419a is 26 bytes after a block of size 16 in arena "client"
-==49802== 
-==49802== Invalid read of size 1
-==49802==    at 0x404DC8: ft_substr (in /home/fzhang/github/libft/Tester/a.out)
-==49802==    by 0x404A73: main (ft_substr_test.cpp:32)
-==49802==  Address 0x4de419a is 26 bytes after a block of size 16 in arena "client"
-==49802== 
+ft_substr	: 1.OK 2.MOK 3.OK 4.MOK 5.KO 6.MKO ==77975== Invalid read of size 1
+==77975==    at 0x404D46: ft_substr (in /home/fzhang/github/libft/Tester/a.out)
+==77975==    by 0x404A73: main (ft_substr_test.cpp:32)
+==77975==  Address 0x4de419a is 26 bytes after a block of size 16 in arena "client"
+==77975== 
+==77975== Invalid read of size 1
+==77975==    at 0x404DC8: ft_substr (in /home/fzhang/github/libft/Tester/a.out)
+==77975==    by 0x404A73: main (ft_substr_test.cpp:32)
+==77975==  Address 0x4de419a is 26 bytes after a block of size 16 in arena "client"
+==77975== 
 7.OK 8.MOK 9.OK 10.MOK 11.OK 12.MOK 13.OK 14.MOK 15.OK 16.MOK 
 ft_strjoin	: 1.OK 2.MOK 3.OK 4.MOK 5.OK 6.MOK 7.OK 8.MOK 
-ft_strtrim	: 1.OK 2.MOK 3.OK 4.MOK 5.OK 6.MOK ==49830== Argument 'size' of function malloc has a fishy (possibly negative) value: -11
-==49830==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==49830==    by 0x404E82: ft_strtrim (in /home/fzhang/github/libft/Tester/a.out)
-==49830==    by 0x404A53: main (ft_strtrim_test.cpp:31)
-==49830== 
-==49830== Invalid read of size 1
-==49830==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==49830==    by 0x404A6B: main (ft_strtrim_test.cpp:32)
-==49830==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==49830== 
+ft_strtrim	: 1.OK 2.MOK 3.OK 4.MOK 5.OK 6.MOK ==78004== Argument 'size' of function malloc has a fishy (possibly negative) value: -11
+==78004==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==78004==    by 0x404E82: ft_strtrim (in /home/fzhang/github/libft/Tester/a.out)
+==78004==    by 0x404A53: main (ft_strtrim_test.cpp:31)
+==78004== 
+==78004== Invalid read of size 1
+==78004==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==78004==    by 0x404A6B: main (ft_strtrim_test.cpp:32)
+==78004==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==78004== 
 7.SIGSEGV
-ft_split	: 1.MOK 2.KO 3.MOK 4.KO 5.MOK 6.OK 7.KO 8.OK 9.OK 10.OK ==49844== Invalid write of size 8
-==49844==    at 0x4053DC: fillin_split (in /home/fzhang/github/libft/Tester/a.out)
-==49844==    by 0x4054BD: ft_split (in /home/fzhang/github/libft/Tester/a.out)
-==49844==    by 0x404B88: main (ft_split_test.cpp:52)
-==49844==  Address 0x4de4330 is 0 bytes after a block of size 16 alloc'd
-==49844==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==49844==    by 0x40548E: ft_split (in /home/fzhang/github/libft/Tester/a.out)
-==49844==    by 0x404B88: main (ft_split_test.cpp:52)
-==49844== 
-==49844== Invalid read of size 8
-==49844==    at 0x4053E8: fillin_split (in /home/fzhang/github/libft/Tester/a.out)
-==49844==    by 0x4054BD: ft_split (in /home/fzhang/github/libft/Tester/a.out)
-==49844==    by 0x404B88: main (ft_split_test.cpp:52)
-==49844==  Address 0x4de4330 is 0 bytes after a block of size 16 alloc'd
-==49844==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==49844==    by 0x40548E: ft_split (in /home/fzhang/github/libft/Tester/a.out)
-==49844==    by 0x404B88: main (ft_split_test.cpp:52)
-==49844== 
-==49844== Invalid write of size 8
-==49844==    at 0x405437: fillin_split (in /home/fzhang/github/libft/Tester/a.out)
-==49844==    by 0x4054BD: ft_split (in /home/fzhang/github/libft/Tester/a.out)
-==49844==    by 0x404B88: main (ft_split_test.cpp:52)
-==49844==  Address 0x4de4338 is 8 bytes after a block of size 16 alloc'd
-==49844==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==49844==    by 0x40548E: ft_split (in /home/fzhang/github/libft/Tester/a.out)
-==49844==    by 0x404B88: main (ft_split_test.cpp:52)
-==49844== 
-11.MOK 12.KO 13.KO ==49844== Invalid read of size 8
-==49844==    at 0x40483B: freeTab(char**) (ft_split_test.cpp:15)
-==49844==    by 0x404BED: main (ft_split_test.cpp:56)
-==49844==  Address 0x4de4330 is 0 bytes after a block of size 16 alloc'd
-==49844==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==49844==    by 0x40548E: ft_split (in /home/fzhang/github/libft/Tester/a.out)
-==49844==    by 0x404B88: main (ft_split_test.cpp:52)
-==49844== 
-==49844== Invalid read of size 8
-==49844==    at 0x40484E: freeTab(char**) (ft_split_test.cpp:16)
-==49844==    by 0x404BED: main (ft_split_test.cpp:56)
-==49844==  Address 0x4de4330 is 0 bytes after a block of size 16 alloc'd
-==49844==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==49844==    by 0x40548E: ft_split (in /home/fzhang/github/libft/Tester/a.out)
-==49844==    by 0x404B88: main (ft_split_test.cpp:52)
-==49844== 
-14.MOK 15.OK ==49844== Invalid read of size 1
-==49844==    at 0x405251: get_item (in /home/fzhang/github/libft/Tester/a.out)
-==49844==    by 0x4053D0: fillin_split (in /home/fzhang/github/libft/Tester/a.out)
-==49844==    by 0x4054BD: ft_split (in /home/fzhang/github/libft/Tester/a.out)
-==49844==    by 0x404C6F: main (ft_split_test.cpp:65)
-==49844==  Address 0x4de455b is 0 bytes after a block of size 11 alloc'd
-==49844==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==49844==    by 0x4C4C58E: strdup (strdup.c:42)
-==49844==    by 0x404C57: main (ft_split_test.cpp:64)
-==49844== 
-==49844== Conditional jump or move depends on uninitialised value(s)
-==49844==    at 0x40525B: get_item (in /home/fzhang/github/libft/Tester/a.out)
-==49844==    by 0x4053D0: fillin_split (in /home/fzhang/github/libft/Tester/a.out)
-==49844==    by 0x4054BD: ft_split (in /home/fzhang/github/libft/Tester/a.out)
-==49844==    by 0x404C6F: main (ft_split_test.cpp:65)
-==49844== 
+ft_split	: 1.MOK 2.KO 3.MOK 4.KO 5.MOK 6.OK 7.KO 8.OK 9.OK 10.OK ==78018== Invalid write of size 8
+==78018==    at 0x4053DC: fillin_split (in /home/fzhang/github/libft/Tester/a.out)
+==78018==    by 0x4054BD: ft_split (in /home/fzhang/github/libft/Tester/a.out)
+==78018==    by 0x404B88: main (ft_split_test.cpp:52)
+==78018==  Address 0x4de4330 is 0 bytes after a block of size 16 alloc'd
+==78018==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==78018==    by 0x40548E: ft_split (in /home/fzhang/github/libft/Tester/a.out)
+==78018==    by 0x404B88: main (ft_split_test.cpp:52)
+==78018== 
+==78018== Invalid read of size 8
+==78018==    at 0x4053E8: fillin_split (in /home/fzhang/github/libft/Tester/a.out)
+==78018==    by 0x4054BD: ft_split (in /home/fzhang/github/libft/Tester/a.out)
+==78018==    by 0x404B88: main (ft_split_test.cpp:52)
+==78018==  Address 0x4de4330 is 0 bytes after a block of size 16 alloc'd
+==78018==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==78018==    by 0x40548E: ft_split (in /home/fzhang/github/libft/Tester/a.out)
+==78018==    by 0x404B88: main (ft_split_test.cpp:52)
+==78018== 
+==78018== Invalid write of size 8
+==78018==    at 0x405437: fillin_split (in /home/fzhang/github/libft/Tester/a.out)
+==78018==    by 0x4054BD: ft_split (in /home/fzhang/github/libft/Tester/a.out)
+==78018==    by 0x404B88: main (ft_split_test.cpp:52)
+==78018==  Address 0x4de4338 is 8 bytes after a block of size 16 alloc'd
+==78018==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==78018==    by 0x40548E: ft_split (in /home/fzhang/github/libft/Tester/a.out)
+==78018==    by 0x404B88: main (ft_split_test.cpp:52)
+==78018== 
+11.MOK 12.KO 13.KO ==78018== Invalid read of size 8
+==78018==    at 0x40483B: freeTab(char**) (ft_split_test.cpp:15)
+==78018==    by 0x404BED: main (ft_split_test.cpp:56)
+==78018==  Address 0x4de4330 is 0 bytes after a block of size 16 alloc'd
+==78018==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==78018==    by 0x40548E: ft_split (in /home/fzhang/github/libft/Tester/a.out)
+==78018==    by 0x404B88: main (ft_split_test.cpp:52)
+==78018== 
+==78018== Invalid read of size 8
+==78018==    at 0x40484E: freeTab(char**) (ft_split_test.cpp:16)
+==78018==    by 0x404BED: main (ft_split_test.cpp:56)
+==78018==  Address 0x4de4330 is 0 bytes after a block of size 16 alloc'd
+==78018==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==78018==    by 0x40548E: ft_split (in /home/fzhang/github/libft/Tester/a.out)
+==78018==    by 0x404B88: main (ft_split_test.cpp:52)
+==78018== 
+14.MOK 15.OK ==78018== Invalid read of size 1
+==78018==    at 0x405251: get_item (in /home/fzhang/github/libft/Tester/a.out)
+==78018==    by 0x4053D0: fillin_split (in /home/fzhang/github/libft/Tester/a.out)
+==78018==    by 0x4054BD: ft_split (in /home/fzhang/github/libft/Tester/a.out)
+==78018==    by 0x404C6F: main (ft_split_test.cpp:65)
+==78018==  Address 0x4de455b is 0 bytes after a block of size 11 alloc'd
+==78018==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==78018==    by 0x4C4C58E: strdup (strdup.c:42)
+==78018==    by 0x404C57: main (ft_split_test.cpp:64)
+==78018== 
+==78018== Conditional jump or move depends on uninitialised value(s)
+==78018==    at 0x40525B: get_item (in /home/fzhang/github/libft/Tester/a.out)
+==78018==    by 0x4053D0: fillin_split (in /home/fzhang/github/libft/Tester/a.out)
+==78018==    by 0x4054BD: ft_split (in /home/fzhang/github/libft/Tester/a.out)
+==78018==    by 0x404C6F: main (ft_split_test.cpp:65)
+==78018== 
 16.SIGSEGV
-ft_itoa		: ==49858== Conditional jump or move depends on uninitialised value(s)
-==49858==    at 0x484FBFB: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==49858==    by 0x4049B1: main (ft_itoa_test.cpp:21)
-==49858== 
-==49858== Conditional jump or move depends on uninitialised value(s)
-==49858==    at 0x402617: check(bool) (check.cpp:8)
-==49858==    by 0x4049C0: main (ft_itoa_test.cpp:21)
-==49858== 
-1.OK 2.MOK 3.OK 4.MOK ==49858== Conditional jump or move depends on uninitialised value(s)
-==49858==    at 0x484FBFB: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==49858==    by 0x404B7E: main (ft_itoa_test.cpp:29)
-==49858== 
-==49858== Conditional jump or move depends on uninitialised value(s)
-==49858==    at 0x402617: check(bool) (check.cpp:8)
-==49858==    by 0x404B8D: main (ft_itoa_test.cpp:29)
-==49858== 
-5.OK 6.MOK ==49858== Conditional jump or move depends on uninitialised value(s)
-==49858==    at 0x484FBFB: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==49858==    by 0x404C63: main (ft_itoa_test.cpp:32)
-==49858== 
-==49858== Conditional jump or move depends on uninitialised value(s)
-==49858==    at 0x402617: check(bool) (check.cpp:8)
-==49858==    by 0x404C72: main (ft_itoa_test.cpp:32)
-==49858== 
-7.OK 8.MOK ==49858== Conditional jump or move depends on uninitialised value(s)
-==49858==    at 0x484FBFB: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==49858==    by 0x404D4B: main (ft_itoa_test.cpp:35)
-==49858== 
-==49858== Conditional jump or move depends on uninitialised value(s)
-==49858==    at 0x402617: check(bool) (check.cpp:8)
-==49858==    by 0x404D5A: main (ft_itoa_test.cpp:35)
-==49858== 
-9.OK 10.MOK ==49858== Conditional jump or move depends on uninitialised value(s)
-==49858==    at 0x484FBFB: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==49858==    by 0x404E33: main (ft_itoa_test.cpp:39)
-==49858== 
-==49858== Conditional jump or move depends on uninitialised value(s)
-==49858==    at 0x402617: check(bool) (check.cpp:8)
-==49858==    by 0x404E42: main (ft_itoa_test.cpp:39)
-==49858== 
+ft_itoa		: ==78032== Conditional jump or move depends on uninitialised value(s)
+==78032==    at 0x484FBFB: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==78032==    by 0x4049B1: main (ft_itoa_test.cpp:21)
+==78032== 
+==78032== Conditional jump or move depends on uninitialised value(s)
+==78032==    at 0x402617: check(bool) (check.cpp:8)
+==78032==    by 0x4049C0: main (ft_itoa_test.cpp:21)
+==78032== 
+1.OK 2.MOK 3.OK 4.MOK ==78032== Conditional jump or move depends on uninitialised value(s)
+==78032==    at 0x484FBFB: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==78032==    by 0x404B7E: main (ft_itoa_test.cpp:29)
+==78032== 
+==78032== Conditional jump or move depends on uninitialised value(s)
+==78032==    at 0x402617: check(bool) (check.cpp:8)
+==78032==    by 0x404B8D: main (ft_itoa_test.cpp:29)
+==78032== 
+5.OK 6.MOK ==78032== Conditional jump or move depends on uninitialised value(s)
+==78032==    at 0x484FBFB: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==78032==    by 0x404C63: main (ft_itoa_test.cpp:32)
+==78032== 
+==78032== Conditional jump or move depends on uninitialised value(s)
+==78032==    at 0x402617: check(bool) (check.cpp:8)
+==78032==    by 0x404C72: main (ft_itoa_test.cpp:32)
+==78032== 
+7.OK 8.MOK ==78032== Conditional jump or move depends on uninitialised value(s)
+==78032==    at 0x484FBFB: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==78032==    by 0x404D4B: main (ft_itoa_test.cpp:35)
+==78032== 
+==78032== Conditional jump or move depends on uninitialised value(s)
+==78032==    at 0x402617: check(bool) (check.cpp:8)
+==78032==    by 0x404D5A: main (ft_itoa_test.cpp:35)
+==78032== 
+9.OK 10.MOK ==78032== Conditional jump or move depends on uninitialised value(s)
+==78032==    at 0x484FBFB: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==78032==    by 0x404E33: main (ft_itoa_test.cpp:39)
+==78032== 
+==78032== Conditional jump or move depends on uninitialised value(s)
+==78032==    at 0x402617: check(bool) (check.cpp:8)
+==78032==    by 0x404E42: main (ft_itoa_test.cpp:39)
+==78032== 
 11.OK 12.MOK 
 ft_strmapi	: 1.OK 2.MOK 3.OK 4.MOK 
 ft_putchar_fd	: 1.OK 
@@ -203,4 +210,103 @@ ft_putstr_fd	: 1.KO
 ft_putendl_fd	: 1.KO 
 ft_putnbr_fd	: 1.OK 2.OK 3.OK 4.OK 5.OK 
 ft_striteri	: 1.OK 2.KO 3.KO 
+make bonus -C /home/fzhang/github/libft
+make[1]: Entering directory '/home/fzhang/github/libft'
+rm -f ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_itoa.o ft_lstadd_back_bonus.o ft_lstadd_front_bonus.o ft_lstclear_bonus.o ft_lstdelone_bonus.o ft_lstiter_bonus.o ft_lstlast_bonus.o ft_lstmap_bonus.o ft_lstnew_bonus.o ft_lstsize_bonus.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_split.o ft_strchr.o ft_strdup.o ft_striteri.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strmapi.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o 
+rm -f libft.a 
+cc -Wall -Wextra -Werror -I.    -c -o ft_atoi.o ft_atoi.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_bzero.o ft_bzero.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_calloc.o ft_calloc.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_isalnum.o ft_isalnum.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_isalpha.o ft_isalpha.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_isascii.o ft_isascii.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_isdigit.o ft_isdigit.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_isprint.o ft_isprint.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_itoa.o ft_itoa.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_lstadd_back_bonus.o ft_lstadd_back_bonus.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_lstadd_front_bonus.o ft_lstadd_front_bonus.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_lstclear_bonus.o ft_lstclear_bonus.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_lstdelone_bonus.o ft_lstdelone_bonus.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_lstiter_bonus.o ft_lstiter_bonus.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_lstlast_bonus.o ft_lstlast_bonus.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_lstmap_bonus.o ft_lstmap_bonus.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_lstnew_bonus.o ft_lstnew_bonus.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_lstsize_bonus.o ft_lstsize_bonus.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_memchr.o ft_memchr.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_memcmp.o ft_memcmp.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_memcpy.o ft_memcpy.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_memmove.o ft_memmove.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_memset.o ft_memset.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_putchar_fd.o ft_putchar_fd.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_putendl_fd.o ft_putendl_fd.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_putnbr_fd.o ft_putnbr_fd.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_putstr_fd.o ft_putstr_fd.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_split.o ft_split.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_strchr.o ft_strchr.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_strdup.o ft_strdup.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_striteri.o ft_striteri.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_strjoin.o ft_strjoin.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_strlcat.o ft_strlcat.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_strlcpy.o ft_strlcpy.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_strlen.o ft_strlen.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_strmapi.o ft_strmapi.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_strncmp.o ft_strncmp.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_strnstr.o ft_strnstr.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_strrchr.o ft_strrchr.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_strtrim.o ft_strtrim.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_substr.o ft_substr.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_tolower.o ft_tolower.c
+cc -Wall -Wextra -Werror -I.    -c -o ft_toupper.o ft_toupper.c
+ar rcs libft.a ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_itoa.o ft_lstadd_back_bonus.o ft_lstadd_front_bonus.o ft_lstclear_bonus.o ft_lstdelone_bonus.o ft_lstiter_bonus.o ft_lstlast_bonus.o ft_lstmap_bonus.o ft_lstnew_bonus.o ft_lstsize_bonus.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_split.o ft_strchr.o ft_strdup.o ft_striteri.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strmapi.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o
+ar rcs libft.a ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_itoa.o ft_lstadd_back_bonus.o ft_lstadd_front_bonus.o ft_lstclear_bonus.o ft_lstdelone_bonus.o ft_lstiter_bonus.o ft_lstlast_bonus.o ft_lstmap_bonus.o ft_lstnew_bonus.o ft_lstsize_bonus.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_split.o ft_strchr.o ft_strdup.o ft_striteri.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strmapi.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o 
+make[1]: Leaving directory '/home/fzhang/github/libft'
+[Bonus]
+ft_lstnew	: 1.OK 2.OK 3.MOK 
+ft_lstadd_front	: 1.OK 2.OK 3.OK 4.OK 5.OK 
+ft_lstsize	: 1.OK 2.OK 3.OK 
+ft_lstlast	: ==78232== Invalid read of size 8
+==78232==    at 0x404AF4: ft_lstlast (in /home/fzhang/github/libft/Tester/a.out)
+==78232==    by 0x40494F: main (ft_lstlast_test.cpp:22)
+==78232==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==78232== 
+1.SIGSEGV
+ft_lstadd_back	: ==78246== Invalid read of size 8
+==78246==    at 0x404974: main (ft_lstadd_back_test.cpp:23)
+==78246==  Address 0x8 is not stack'd, malloc'd or (recently) free'd
+==78246== 
+1.SIGSEGV
+ft_lstdelone	: 
+ft_lstclear	: ==78277== Invalid read of size 8
+==78277==    at 0x404AD8: ft_lstclear (in /home/fzhang/github/libft/Tester/a.out)
+==78277==    by 0x404A1C: main (ft_lstclear_test.cpp:24)
+==78277==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==78277== 
+1.SIGSEGV
+ft_lstiter	: 1.OK ==78292== Invalid read of size 8
+==78292==    at 0x404A89: main (ft_lstiter_test.cpp:30)
+==78292==  Address 0x8 is not stack'd, malloc'd or (recently) free'd
+==78292== 
+2.SIGSEGV
+==78292== 48 bytes in 3 blocks are definitely lost in loss record 2 of 2
+==78292==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==78292==    by 0x404BB5: ft_lstnew (in /home/fzhang/github/libft/Tester/a.out)
+==78292==    by 0x4049BA: main (ft_lstiter_test.cpp:25)
+==78292== 
+ft_lstmap	: 1.OK ==78306== Invalid read of size 8
+==78306==    at 0x404ABA: main (ft_lstmap_test.cpp:30)
+==78306==  Address 0x8 is not stack'd, malloc'd or (recently) free'd
+==78306== 
+2.SIGSEGV
+==78306== 20 (16 direct, 4 indirect) bytes in 1 blocks are definitely lost in loss record 3 of 4
+==78306==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==78306==    by 0x404DC5: ft_lstnew (in /home/fzhang/github/libft/Tester/a.out)
+==78306==    by 0x404CE1: ft_lstmap (in /home/fzhang/github/libft/Tester/a.out)
+==78306==    by 0x404A86: main (ft_lstmap_test.cpp:26)
+==78306== 
+==78306== 48 bytes in 3 blocks are definitely lost in loss record 4 of 4
+==78306==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==78306==    by 0x404DC5: ft_lstnew (in /home/fzhang/github/libft/Tester/a.out)
+==78306==    by 0x4049DA: main (ft_lstmap_test.cpp:25)
+==78306== 
+
 

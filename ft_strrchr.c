@@ -18,13 +18,13 @@ char	*ft_strrchr(const char *s, int c)
 	copy = NULL;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (char)c)
 			copy = (char *)s;
 		s++;
 	}
-	if (c == *s)
+	if (c == 0)
 		copy = (char *)s;
-	if (!c)
+	if (copy)
 		return (copy);
 	return (NULL); //E- if c is not founded, return a NULL pointer
 }

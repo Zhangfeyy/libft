@@ -10,16 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
+// char can hold the value 0 — it represents the null character ('\0')
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (char)c) //casting!
 			return ((char *)s);
 		s++;
 	}
-	if (*s)
+	if (c == 0)
 		return ((char *)s);
-	return (NULL); //E- if c is not founded, return a NULL pointer
+	return (NULL); 
+	//E- if c is not founded, return a NULL pointer
 }
+
+// int main ()
+// {
+// 	ft_strchr(s, 0) == s + strlen(s);
+// }
