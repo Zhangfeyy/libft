@@ -9,6 +9,8 @@
 /*   Updated: 2025/04/23 12:33:03 by fzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
@@ -17,5 +19,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s);
 		s++;
 	}
-	return ((char *)s);
+	if (*s)
+		return ((char *)s);
+	return (NULL); //E- if c is not founded, return a NULL pointer
 }
