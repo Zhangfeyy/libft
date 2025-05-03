@@ -9,6 +9,8 @@
 /*   Updated: 2025/04/23 13:08:46 by fzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
+// the standard input format should be blank + (+/-) + digits
 int	put_int(const char *src, int i)
 {
 	return (src[i] - '0');
@@ -23,13 +25,6 @@ int	ft_isspace(char c)
 	return (0);
 }
 
-int	write_sign(int count)
-{
-	if (count % 2 == 1)
-		return (-1);
-	return (1);
-}
-
 int	multi(const char *str, int i)
 {
 	if (!(str[i + 1] >= '0' && str[i + 1] <= '9'))
@@ -39,33 +34,33 @@ int	multi(const char *str, int i)
 
 int	ft_atoi(const char *nptr)
 {
-	int	i;
-	int	count;
+	size_t	i;
+	int	sign;
 	int	nbr;
 
 	i = 0;
-	count = 0;
+	sign = 1;
 	nbr = 0;
 	while (ft_isspace(nptr[i]))
-	{
 		i++;
-	}
-	while (nptr[i] == '-' || nptr[i] == '+')
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
 		if (nptr[i] == '-')
-			count++;
+			sign = -1;
 		i++;
 	}
+	while(!(nptr[i] >= '0' && nptr[i] <= '9'))
+		return (0);
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		nbr += multi(nptr, i) * put_int(nptr, i);
 		i++;
 	}
-	return (nbr * write_sign(count));
+	return (nbr * sign);
 }
-/*
-int	main()
-{
-	int test = ft_atoi("    -123456");
-}
-*/
+
+// int main()
+// {
+// 	char escape[] = {9, 10, 11, 12, 13, 0, 48};
+// 	int check = ft_atoi(escape);
+// }

@@ -17,7 +17,7 @@ char	*ft_strdup(const char *s)
 	size_t	count;
 	char	*copy;
 
-	copy = (char *)malloc((ft_strlen((char *)s)) * sizeof(char));
+	copy = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!copy)
 		return (NULL);
 	count = 0;

@@ -19,6 +19,4 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		f(n, &s[n]);
 		n++;
 	}
-	if (!s[n])
-		f(n, &s[n]);
 }

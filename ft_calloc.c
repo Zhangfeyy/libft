@@ -16,6 +16,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	unsigned char	*copy;
 
+	if(nmemb * size > 0 && (nmemb * size /size != nmemb)) // tp handle overflow and when is 0 should return a freeable pointer
+		return (NULL);
 	copy = (void *)malloc(nmemb * size);
 	if (!copy)
 		return (NULL);

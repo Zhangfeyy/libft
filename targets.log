@@ -1,0 +1,632 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Sat May  3 20:38:25 2025
+
+# Variables
+
+# environment
+RUSTUP_HOME = /usr/share/rust/rustup
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+SSH_AGENT_LAUNCHER = gnome-keyring
+# environment
+VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
+# environment
+VSCODE_CWD = /home/fzhang/github/libft
+# environment
+LIBVIRT_DEFAULT_URI = qemu:///system
+# default
+MAKE_COMMAND := make
+ 
+# environment
+QT_ACCESSIBILITY = 1
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/fzhang/github/libft
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+MAIL = fzhang@student.42vienna.com
+# environment
+XDG_DATA_DIRS = /usr/share/ubuntu:/usr/share/gnome:/home/fzhang/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+# environment
+OLDPWD = /home/fzhang/github
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /home/fzhang/.config/Code/CachedData/17baf841131aa23349f217ca7c570c76ee87b957
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session6
+# environment
+LANG = C
+# environment
+XAUTHORITY = /home/fzhang/.Xauthority
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# environment
+GNOME_TERMINAL_SERVICE = :1.93
+# makefile
+MAKEFLAGS = pqrR
+# makefile
+CURDIR := /home/fzhang/github/libft
+# makefile (from 'Makefile', line 5)
+BONUS_SRCS = $(filter %bonus%, $(wildcard *.c))
+# makefile (from 'Makefile', line 2)
+SRCS = $(filter-out %bonus%, $(wildcard *.c))
+# environment
+VSCODE_L10N_BUNDLE_LOCATION = 
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /run/user/102363/keyring/ssh
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+XDG_SESSION_DESKTOP = ubuntu
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_PID = 391513
+# environment
+KRB5CCNAME = FILE:/tmp/krb5cc_102363_Na8GWD
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+SESSION_MANAGER = local/c1r7p3.42vienna.com:@/tmp/.ICE-unix/358984,unix/c1r7p3.42vienna.com:/tmp/.ICE-unix/358984
+# automatic
+*F = $(notdir $*)
+# environment
+CHROME_DESKTOP = code.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/102363/bus
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile (from 'Makefile', line 3)
+OBJS = $(SRCS:.c=.o)
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# makefile
+SHELL = /bin/sh
+# default
+MAKECMDGOALS := all
+# environment
+XMODIFIERS = @im=ibus
+# environment
+SHLVL = 1
+# environment
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/074ab415_1602_4ec3_a367_6a7280c33866
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /home/fzhang/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/share/rust/cargo/bin
+# default
+MAKEFILES := 
+# automatic
+^F = $(notdir $^)
+# environment
+CARGO_HOME = /usr/share/rust/cargo
+# environment
+DOCKER_HOST = unix:///run/user/102363/docker.sock
+# automatic
+?F = $(notdir $?)
+# makefile (from 'Makefile', line 12)
+NAME = libft.a
+# environment
+GTK_IM_MODULE = ibus
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# automatic
++F = $(notdir $+)
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+DESKTOP_SESSION = ubuntu
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+LOGNAME = fzhang
+# makefile
+.DEFAULT_GOAL := all
+# environment
+SYSTEMD_EXEC_PID = 359009
+# makefile (from 'Makefile', line 9)
+RM = rm -f
+# environment
+DISPLAY = :0
+# environment
+USER = fzhang
+# environment
+GTK_MODULES = gail:atk-bridge
+# default
+MAKE_VERSION := 4.3
+# environment
+_ = /usr/bin/code
+# environment
+XDG_RUNTIME_DIR = /run/user/102363
+# makefile (from 'Makefile', line 11)
+CFLAGS = -Wall -Wextra -Werror -I. 
+# environment
+GPG_AGENT_INFO = /run/user/102363/gnupg/S.gpg-agent:0:1
+# environment
+COLORTERM = truecolor
+# environment
+XDG_SESSION_CLASS = user
+# environment
+HOME = /home/fzhang
+# environment
+QT_IM_MODULE = ibus
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/102363/vscode-9dc69a61-1.99-main.sock
+# environment
+TERM = xterm-256color
+# environment
+FT_HOOK_PATHNAME = login-user.d
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+VSCODE_CLI = 1
+# environment
+FT_HOOK_NAME = login-user
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+VTE_VERSION = 6800
+# environment
+XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/fzhang
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# makefile (from 'Makefile', line 8)
+CC = cc
+# environment
+XDG_MENU_PREFIX = gnome-
+# makefile (from 'Makefile', line 6)
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
+# environment
+VSCODE_ESM_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+GDMSESSION = ubuntu
+# variable set hash-table stats:
+# Load=108/1024=11%, Rehash=0, Collisions=12/147=8%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2048, inode 1209962): 101 files, no impossibilities.
+
+# 101 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+ft_isalpha.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.555952104
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_lstadd_front_bonus.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.64795376
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_strchr.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.891958155
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_putstr_fd.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.86395765
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_isprint.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.60795304
+#  File has been updated.
+#  Successfully updated.
+
+libft.a: ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_itoa.o ft_lstadd_back_bonus.o ft_lstadd_front_bonus.o ft_lstclear_bonus.o ft_lstdelone_bonus.o ft_lstiter_bonus.o ft_lstlast_bonus.o ft_lstmap_bonus.o ft_lstnew_bonus.o ft_lstsize_bonus.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_split.o ft_strchr.o ft_strdup.o ft_striteri.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strmapi.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o
+#  Implicit rule search has not been done.
+#  Last modified 2025-05-03 20:05:14.095961828
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 18):
+	ar rcs $@ $^
+
+# Not a target:
+ft_lstiter_bonus.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.68795448
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_lstlast_bonus.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.703954769
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_toupper.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:14.071961396
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_isalnum.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.547951959
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_putendl_fd.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.835957146
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_striteri.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.907958442
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-02 22:12:07.827302701
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_strlen.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.955959307
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_lstnew_bonus.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.735955345
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_strnstr.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:14.003960171
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_strmapi.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.967959523
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_strdup.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.90395837
+#  File has been updated.
+#  Successfully updated.
+
+bonus: re ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_itoa.o ft_lstadd_back_bonus.o ft_lstadd_front_bonus.o ft_lstclear_bonus.o ft_lstdelone_bonus.o ft_lstiter_bonus.o ft_lstlast_bonus.o ft_lstmap_bonus.o ft_lstnew_bonus.o ft_lstsize_bonus.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_split.o ft_strchr.o ft_strdup.o ft_striteri.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strmapi.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 30):
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+
+clean:
+ 
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 21):
+	$(RM) $(OBJS) $(BONUS_OBJS)
+
+# Not a target:
+ft_itoa.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.623953328
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_memset.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.815956786
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_isascii.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.567952319
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_memcpy.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.795956425
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_strtrim.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:14.035960747
+#  File has been updated.
+#  Successfully updated.
+
+re: fclean libft.a
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+ft_bzero.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.519951455
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_isdigit.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.591952752
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_putnbr_fd.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.851957434
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_strjoin.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.919958658
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_strlcat.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.931958875
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: libft.a
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Successfully updated.
+
+fclean: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 25):
+	$(RM) $(NAME) 
+
+# Not a target:
+ft_lstdelone_bonus.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.679954336
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_lstsize_bonus.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.751955633
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_lstadd_back_bonus.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.635953544
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_memmove.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.80395657
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_atoi.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.507951239
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_strlcpy.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.943959091
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_lstclear_bonus.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.663954049
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_calloc.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.531951672
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_split.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.88395801
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_memcmp.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.78395621
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_lstmap_bonus.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.719955057
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_substr.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:14.051961036
+#  File has been updated.
+#  Successfully updated.
+ 
+
+# Not a target:
+ft_strrchr.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:14.01996046
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_strncmp.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.983959811
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_putchar_fd.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.82395693
+#  File has been updated.
+#  Successfully updated.
+
+.PHONY: all clean fclean re bonus
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ft_tolower.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:14.05996118
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ft_memchr.o:
+#  Implicit rule search has been done.
+#  Last modified 2025-05-03 20:05:13.771955994
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=53/1024=5%, Rehash=0, Collisions=3/161=2%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 111 / storage = 1436 B / avg = 12 B
+# current buf: size = 8162 B / used = 1436 B / count = 111 / avg = 12 B
+
+# strcache performance: lookups = 220 / hit rate = 49%
+# hash-table stats:
+# Load=111/8192=1%, Rehash=0, Collisions=0/220=0%
+# Finished Make data base on Sat May  3 20:38:25 2025
+
+ 

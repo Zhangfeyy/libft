@@ -29,8 +29,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		if (!temp_new->next)
 		{
 			ft_lstclear(new, del);
-			free(*new);
-			free(new);
 			return (NULL);
 		}
 		temp_new = temp_new->next;

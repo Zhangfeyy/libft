@@ -84,5 +84,6 @@ char	*ft_itoa(int n)
 		n = -n;
 	}
 	convert(n, str, &i);
+	str[i] = '\0';
 	return (str);
 }

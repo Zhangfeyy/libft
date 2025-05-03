@@ -11,6 +11,16 @@
 /* ************************************************************************** */
 #include "libft.h"
 
+// ft_strlen(const char *s)
+// {
+// 	size_t count;
+// 	while(s[count])
+// 	{
+// 		count++;
+// 	}
+// 	return(count);
+// }
+
 //also control the boundary in the loop structure
 size_t	get_len(char const *s, char c)
 {
@@ -41,7 +51,8 @@ char	*get_item(char const *s, char c, size_t *i)
 
 	len = 0;
 	j = *i;
-	while (s[j] != c)
+	// control the boundary in the loop structure itself
+	while (s[j] != c && (j < ft_strlen(s)))
 	{
 		len++;
 		j++;
@@ -53,16 +64,16 @@ char	*get_item(char const *s, char c, size_t *i)
 	while (j < len)
 	{
 		item[j] = s[*i + j];
-		(*i)++;
 		j++;
 	}
+	*i = *i + j;
 	item[j] = '\0';
 	return (item);
 }
 
 void	remove_mem(char **split, size_t j)
 {
-	while (j >= 0)
+	while (j <= 0)
 	{
 		free(split[j]);
 		j--;
@@ -107,3 +118,9 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (split);
 }
+
+// int main ()
+// {
+// 	char ** tab = ft_split("chinimala", ' ');
+// 	int	check = (tab[1] == NULL);
+// }
