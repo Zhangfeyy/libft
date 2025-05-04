@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include <asm-generic/fcntl.h>
 
 void	output(int n, int fd)
 {
@@ -39,3 +40,8 @@ void	ft_putnbr_fd(int n, int fd)
 		output(n % 10, fd);
 	}
 }
+// int main ()
+// {
+// 	int fd = open("test", O_RDWR | O_CREAT);
+// 	ft_putnbr_fd(-345678, fd);
+// }

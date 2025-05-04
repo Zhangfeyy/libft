@@ -52,8 +52,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub[i] = '\0';
 	return (sub);
 }
-
+// NOTE
+// if index is beyond the length, should always return "\0"
 // int main()
 // {
-// 	ft_substr("hola", 4294967295, 0);
+// 	char *test = ft_substr("hello", 4294967295, 0);
+//	int check = (test == NULL);
 // }

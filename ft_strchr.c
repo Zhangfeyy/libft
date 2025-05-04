@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-// char can hold the value 0 — it represents the null character ('\0')
+
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
@@ -24,8 +24,10 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL); 
 	//E- if c is not founded, return a NULL pointer
 }
-
+// NOTE
+// char can hold the value 0 — it represents the null character ('\0')
 // int main ()
 // {
-// 	ft_strchr(s, 0) == s + strlen(s);
+// 	const char *s = "test";
+// 	int check = (ft_strchr(s, 0) == (s + 4));
 // }

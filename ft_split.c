@@ -11,9 +11,10 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-// ft_strlen(const char *s)
+// size_t ft_strlen(const char *s)
 // {
 // 	size_t count;
+// 	count = 0;
 // 	while(s[count])
 // 	{
 // 		count++;
@@ -21,7 +22,21 @@
 // 	return(count);
 // }
 
-//also control the boundary in the loop structure
+// int	ft_strncmp(const char *s1, const char *s2, size_t n)
+// {
+// 	size_t	i;
+
+// 	i = 0;
+// 	while (i < n && (s1[i] | s2[i]))
+// 	{
+// 		if (s1[i] != s2[i])
+// 			return ((unsigned char)(s1[i]) - (unsigned char)(s2[i])); //all converted into unsigned characters
+// 		i++;
+// 	}
+// 	return (0);
+// }
+//
+// also control the boundary in the loop structure
 size_t	get_len(char const *s, char c)
 {
 	size_t	i;
@@ -122,9 +137,9 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (split);
 }
-
+//
 // int main ()
 // {
-// 	ft_split("^^^1^^2a,^^^^3^^^^--h^^^^", '^');
-
+// 	char ** split = ft_split("^^^1^^2a,^^^^3^^^^--h^^^^", '^');
+// 	int check = ft_strncmp(split[1], "2a,",4);
 // }

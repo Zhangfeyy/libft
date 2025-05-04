@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+// #include <asm-generic/fcntl.h>
 
 void	ft_putendl_fd(char *s, int fd)
 {
@@ -20,3 +21,9 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	write(fd, "\n", 1);
 }
+//
+// int main()
+// {
+// 	int fd = open("test", O_RDWR | O_CREAT);
+// 	ft_putendl_fd((char*)"test", fd);
+// }
