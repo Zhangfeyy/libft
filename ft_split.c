@@ -113,7 +113,10 @@ char	**ft_split(char const *s, char c)
 
 	split = (char **)malloc((get_len(s, c) + 1) * sizeof(char *));
 	if (!split)
+	{
+		free(split);
 		return (NULL);
+	}
 	if (!fillin_split(s, c, split))
 		return (NULL);
 	return (split);

@@ -18,9 +18,7 @@ size_t	check_len(char const *s, unsigned int start, size_t len)
 
 	length = len + 1;
 	count = 0;
-	if (start > ft_strlen(s))
-		length--;
-	else if(!s[start + count])
+	if (start >= ft_strlen(s))
 		length = 1;
 	else
 	{
@@ -54,3 +52,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub[i] = '\0';
 	return (sub);
 }
+
+// int main()
+// {
+// 	ft_substr("hola", 4294967295, 0);
+// }

@@ -19,7 +19,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s);
 		s++;
 	}
-	if (c == 0)
+	if ((unsigned char)c == 0)
 		return ((char *)s);
 	return (NULL); 
 	//E- if c is not founded, return a NULL pointer
