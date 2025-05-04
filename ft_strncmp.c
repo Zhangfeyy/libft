@@ -6,9 +6,10 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 12:45:42 by fzhang            #+#    #+#             */
-/*   Updated: 2025/05/04 10:28:10 by marvin           ###   ########.fr       */
+/*   Updated: 2025/05/04 10:58:34 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -18,12 +19,13 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	while (i < n && (s1[i] | s2[i]))
 	{
 		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+			return ((unsigned char)(s1[i]) - (unsigned char)(s2[i])); //all converted into unsigned characters
 		i++;
 	}
 	return (0);
 }
  int main()
 {
-	"test\200", "test\0"
+	int check = ft_strncmp("test\200", "test\0", 6);
+	printf(check);
 }
