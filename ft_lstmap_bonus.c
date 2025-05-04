@@ -66,7 +66,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*temp_old;
 	t_list	*temp_new;
-	t_list	**new;
+	t_list	*new;
 	int cold;
 	int cnew;
 
@@ -78,25 +78,28 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	temp_new = ft_lstnew(f(temp_old->content));
 
-	cnew = *(int *)lst->content;
-
-	new = &temp_new;
-	cnew = *(int *)lst->content;
+	cnew = *(int *)temp_new->content;
+	//the problem is here, when i call new again, it will parse the latest address of temp_new
+	new = temp_new;
+	cnew = *(int *)new->content;
 
 	if (!temp_new)
 		return (NULL);
 	while (temp_old->next)
 	{
 		temp_old = temp_old->next;
+		cold = *(int *)temp_old->content;
 		temp_new->next = ft_lstnew(f(temp_old->content));
 		if (!temp_new->next)
 		{
-			ft_lstclear(new, del);
+			ft_lstclear(&new, del);
 			return (NULL);
 		}
 		temp_new = temp_new->next;
+		cnew = *(int *)temp_new->content;
 	}
-	return (*new);
+	cnew = *(int *)new->content;
+	return new;
 }
 
 int main()
