@@ -73,11 +73,12 @@ char	*get_item(char const *s, char c, size_t *i)
 
 void	remove_mem(char **split, size_t j)
 {
-	while (j <= 0)
+	while (j > 0)
 	{
 		free(split[j]);
 		j--;
 	}
+	free(split[0]);
 	free(split);
 }
 
@@ -124,6 +125,6 @@ char	**ft_split(char const *s, char c)
 
 // int main ()
 // {
-// 	char ** tab = ft_split("chinimala", ' ');
-// 	int	check = (tab[1] == NULL);
+// 	ft_split("^^^1^^2a,^^^^3^^^^--h^^^^", '^');
+
 // }
