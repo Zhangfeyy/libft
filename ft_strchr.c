@@ -15,12 +15,12 @@ char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
-		if (*s == (char)c) //casting!
-			return ((char *)s);
+		if ((unsigned char)*s == (unsigned char)c) //casting!
+			return ((unsigned char *)s);
 		s++;
 	}
 	if (c == 0)
-		return ((char *)s);
+		return ((unsigned char *)s);
 	return (NULL); 
 	//E- if c is not founded, return a NULL pointer
 }
