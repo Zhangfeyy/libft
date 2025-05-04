@@ -24,8 +24,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
- int main()
-{
-	int check = ft_strncmp("test\200", "test\0", 6);
-	printf(check);
-}
+//  int main()
+// {
+// 	int check = ft_strncmp("test\200", "test\0", 6);
+// 	printf(check);
+// }
