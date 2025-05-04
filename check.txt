@@ -35,3 +35,7 @@ You miscalculate the size needed for allocation.
 Or you write one element too far in a loop (off-by-one error).
 
 size n. how many bytes are written illegally
+
+==393403== Conditional jump or move depends on uninitialised value(s)
+means that your program is using a variable before it has been initialized — in this case, it's likely a string or char buffer returned from your ft_itoa function that is not properly null-terminated or contains uninitialized characters.
+
