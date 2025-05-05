@@ -48,7 +48,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 // 	char dest[30]; memset(dest, 0, 30);
 // 	char * src = (char *)"AAAAAAAAA";
 // 	dest[0] = 'B';
-// 	/* 1 */ int check1 = (ft_strlcat(dest, src, 0) == strlen(src));
+// 	int check1 = (ft_strlcat(dest, src, 0) == strlen(src));
 // 		int check2 =  !strcmp(dest, "B");
-// 	/* 2 */ int check3 = ft_strlcat(dest, src, 1) == 10 && !strcmp(dest, "B");
+// 	int check3 = ft_strlcat(dest, src, 1) == 10 && !strcmp(dest, "B");
 // }

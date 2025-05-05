@@ -107,7 +107,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 // int main()
 // {
-// 	char *s = ft_strtrim("   xxxtripouille   xxx", " x");
+// 	char *s = ft_strtrim("   xxxtest   xxx", " x");
 // 	size_t length = ft_strlen(s);
-// 	length = length + 100;
 // }

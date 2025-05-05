@@ -11,6 +11,18 @@
 /* ************************************************************************** */
 #include "libft.h"
 
+// t_list	*ft_lstnew(void *content)
+// {
+// 	t_list	*node;
+
+// 	node = (t_list *)malloc(sizeof(t_list));
+// 	if (!node)
+// 		return (NULL);
+// 	node->content = content;
+// 	node->next = NULL;
+// 	return (node);
+// }
+//
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*temp;
@@ -25,3 +37,16 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		temp = temp->next;
 	temp->next = new;
 }
+// 
+// int main()
+// {
+// 	t_list *temp;
+// 	int a = 1;
+// 	int b = 2;
+	
+// 	temp = ft_lstnew((void *)&a);//make a pointer with the value 1(though may not be a valid addtress)
+// 	ft_lstadd_back(&temp, ft_lstnew((void*)&b));
+// 	temp = temp->next;
+// 	int check = *((int *)(temp->content));
+// 	check = -check;
+// }

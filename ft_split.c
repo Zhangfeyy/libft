@@ -11,9 +11,10 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-// ft_strlen(const char *s)
+// size_t ft_strlen(const char *s)
 // {
 // 	size_t count;
+// 	count = 0;
 // 	while(s[count])
 // 	{
 // 		count++;
@@ -21,7 +22,21 @@
 // 	return(count);
 // }
 
-//also control the boundary in the loop structure
+// int	ft_strncmp(const char *s1, const char *s2, size_t n)
+// {
+// 	size_t	i;
+
+// 	i = 0;
+// 	while (i < n && (s1[i] | s2[i]))
+// 	{
+// 		if (s1[i] != s2[i])
+// 			return ((unsigned char)(s1[i]) - (unsigned char)(s2[i])); //all converted into unsigned characters
+// 		i++;
+// 	}
+// 	return (0);
+// }
+//
+// also control the boundary in the loop structure
 size_t	get_len(char const *s, char c)
 {
 	size_t	i;
@@ -73,11 +88,12 @@ char	*get_item(char const *s, char c, size_t *i)
 
 void	remove_mem(char **split, size_t j)
 {
-	while (j <= 0)
+	while (j > 0)
 	{
 		free(split[j]);
 		j--;
 	}
+	free(split[0]);
 	free(split);
 }
 
@@ -113,14 +129,17 @@ char	**ft_split(char const *s, char c)
 
 	split = (char **)malloc((get_len(s, c) + 1) * sizeof(char *));
 	if (!split)
+	{
+		free(split);
 		return (NULL);
+	}
 	if (!fillin_split(s, c, split))
 		return (NULL);
 	return (split);
 }
-
+//
 // int main ()
 // {
-// 	char ** tab = ft_split("chinimala", ' ');
-// 	int	check = (tab[1] == NULL);
+// 	char ** split = ft_split("^^^1^^2a,^^^^3^^^^--h^^^^", '^');
+// 	int check = ft_strncmp(split[1], "2a,",4);
 // }

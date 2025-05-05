@@ -10,13 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-// If nmemb or size is 0, then calloc() returns a unique pointer value 
-//that can be successfully passed to free().
+
+// void	*ft_memset(void *s, int c, size_t n)
+// {
+// 	size_t			count;
+// 	unsigned char	*copy;
+
+// 	copy = s;
+// 	count = 0;
+// 	while (count < n)
+// 	{
+// 		copy[count] = c;
+// 		count++;
+// 	}
+// 	return (s);
+// }
+// void	ft_bzero(void *s, size_t n)
+// {
+// 	(ft_memset(s, '\0', n));
+// }
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	unsigned char	*copy;
 
-	if(nmemb * size > 0 && (nmemb * size /size != nmemb)) // tp handle overflow and when is 0 should return a freeable pointer
+	if(nmemb * size > 0 && (nmemb * size /size != nmemb)) 
 		return (NULL);
 	copy = (void *)malloc(nmemb * size);
 	if (!copy)
@@ -24,3 +41,15 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(copy, nmemb * size);
 	return (copy);
 }
+//NOTE
+// To handle overflow and when is 0 should return a freeable pointer
+// int main()
+// {
+// 	char *temp = ft_calloc(2,1);
+// 	int check;
+// 	check = 1;
+// 	for(int i = 0; i < 2; i++)
+// 	{
+// 		check = (int)temp[i];
+// 	}
+// }

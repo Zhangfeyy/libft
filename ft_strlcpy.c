@@ -31,6 +31,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 // {
 //	char src[] = "coucou";
 //	char dest[10]; memset(dest, 'A', 10);
-//	/* 1 */ int check = ft_strlcpy(dest, src, 1) == strlen(src) && dest[0] == 0 && dest[1] == 'A';
+//	int check = ft_strlcpy(dest, src, 1) == strlen(src) && dest[0] == 0 && dest[1] == 'A';
 // }
 

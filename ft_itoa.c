@@ -87,3 +87,9 @@ char	*ft_itoa(int n)
 	str[i] = '\0';
 	return (str);
 }
+// int main()
+// {
+// 	char *temp =ft_itoa(-104357);
+// 	int check = (int)temp[1];//48
+// 	check++;
+// }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fzhang <fzhang@student.42vienna.com>       +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 12:39:58 by fzhang            #+#    #+#             */
-/*   Updated: 2025/04/23 12:40:03 by fzhang           ###   ########.fr       */
+/*   Updated: 2025/05/04 14:09:23 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -18,11 +18,11 @@ char	*ft_strrchr(const char *s, int c)
 	copy = NULL;
 	while (*s)
 	{
-		if (*s == (char)c)
+		if (*s == (unsigned char)c)
 			copy = (char *)s;
 		s++;
 	}
-	if (c == 0)
+	if ((unsigned char)c == 0)
 		copy = (char *)s;
 	if (copy)
 		return (copy);

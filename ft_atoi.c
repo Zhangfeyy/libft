@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-// the standard input format should be blank + (+/-) + digits
+
 int	put_int(const char *src, int i)
 {
 	return (src[i] - '0');
@@ -58,9 +58,12 @@ int	ft_atoi(const char *nptr)
 	}
 	return (nbr * sign);
 }
-
+//NOTE
+// the input should be standard, space(s) + (single sign) + digit(s)
+// Otherwise the function will return 0
 // int main()
 // {
 // 	char escape[] = {9, 10, 11, 12, 13, 0, 48};
-// 	int check = ft_atoi(escape);
+// 	int check1 = ft_atoi(escape);
+// 	check1 = -check1;
 // }
