@@ -11,12 +11,12 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int	put_int(const char *src, int i)
+static int	put_int(const char *src, int i)
 {
 	return (src[i] - '0');
 }
 
-int	ft_isspace(char c)
+static int	ft_isspace(char c)
 {
 	if (c == '\f' || c == '\n' || c == '\r')
 		return (1);
@@ -25,7 +25,7 @@ int	ft_isspace(char c)
 	return (0);
 }
 
-int	multi(const char *str, int i)
+static int	multi(const char *str, int i)
 {
 	if (!(str[i + 1] >= '0' && str[i + 1] <= '9'))
 		return (1);
@@ -35,8 +35,8 @@ int	multi(const char *str, int i)
 int	ft_atoi(const char *nptr)
 {
 	size_t	i;
-	int	sign;
-	int	nbr;
+	int		sign;
+	int		nbr;
 
 	i = 0;
 	sign = 1;
@@ -49,7 +49,7 @@ int	ft_atoi(const char *nptr)
 			sign = -1;
 		i++;
 	}
-	while(!(nptr[i] >= '0' && nptr[i] <= '9'))
+	while (!(nptr[i] >= '0' && nptr[i] <= '9'))
 		return (0);
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
@@ -58,9 +58,6 @@ int	ft_atoi(const char *nptr)
 	}
 	return (nbr * sign);
 }
-//NOTE
-// the input should be standard, space(s) + (single sign) + digit(s)
-// Otherwise the function will return 0
 // int main()
 // {
 // 	char escape[] = {9, 10, 11, 12, 13, 0, 48};

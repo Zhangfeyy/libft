@@ -23,7 +23,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		dst[i] = src[i];
 		i++;
 	}
-	//E- only to make sure null terminated, while size can be 0!
 	dst[i] = '\0';
 	return (ft_strlen(src));
 }
@@ -31,6 +30,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 // {
 //	char src[] = "coucou";
 //	char dest[10]; memset(dest, 'A', 10);
-//	int check = ft_strlcpy(dest, src, 1) == strlen(src) && dest[0] == 0 && dest[1] == 'A';
+//	int check = ft_strlcpy(dest, src, 1) == 
+// 		strlen(src) && dest[0] == 0 && dest[1] == 'A';
 // }
-

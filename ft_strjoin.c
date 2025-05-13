@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-//It's generally a good practice to use size_t for indexing and counting
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -18,7 +17,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	unsigned int	j;
 	char			*join;
 
-	join = (char *)malloc((ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1) * sizeof(char));
+	join = (char *)malloc((ft_strlen((char *)s1)
+				+ ft_strlen((char *)s2) + 1) * sizeof(char));
 	if (!join)
 		return (NULL);
 	i = 0;

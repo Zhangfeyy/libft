@@ -10,9 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <asm-generic/fcntl.h>
 
-void	output(int n, int fd)
+static void	output(int n, int fd)
 {
 	char	c;
 

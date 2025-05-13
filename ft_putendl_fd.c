@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-// #include <asm-generic/fcntl.h>
 
 void	ft_putendl_fd(char *s, int fd)
 {

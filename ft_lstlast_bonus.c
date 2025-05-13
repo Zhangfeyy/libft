@@ -16,17 +16,14 @@ t_list	*ft_lstlast(t_list *lst)
 	t_list	*pcurrent;
 
 	pcurrent = lst;
-	if(!pcurrent)
-		return(pcurrent);
+	if (!pcurrent)
+		return (pcurrent);
 	while (pcurrent->next)
 	{
 		pcurrent = pcurrent->next;
 	}
 	return (pcurrent);
 }
-// NOTE
-// If the node is NULL, directly return the current pointer
-// Otherwise it will cause NULL->NEXT Segfault
 // int main()
 // {
 // 	t_list *temp = NULL;

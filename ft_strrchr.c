@@ -26,5 +26,5 @@ char	*ft_strrchr(const char *s, int c)
 		copy = (char *)s;
 	if (copy)
 		return (copy);
-	return (NULL); //E- if c is not founded, return a NULL pointer
+	return (NULL);
 }

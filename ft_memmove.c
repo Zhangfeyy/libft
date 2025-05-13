@@ -39,9 +39,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-//NOTE
-// considering the issue of overlapping, 
-//the order of rewriting should be opposite to the order of reading
 // int main ()
 // {
 // 	char s[] = {65, 66, 67, 68, 69, 0, 45};

@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-size_t	check_len(char const *s, unsigned int start, size_t len)
+static size_t	check_len(char const *s, unsigned int start, size_t len)
 {
 	size_t	length;
 	size_t	count;
@@ -22,28 +22,28 @@ size_t	check_len(char const *s, unsigned int start, size_t len)
 		length = 1;
 	else
 	{
-		while(s[start + count])
+		while (s[start + count])
 			count++;
 	}
-	if(count < len)
+	if (count < len)
 		length = count + 1;
-	return(length);
+	return (length);
 }
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	unsigned int	i;
 	char			*sub;
-	size_t	length;
+	size_t			length;
 
 	length = check_len(s, start, len);
 	sub = (char *)malloc(length * sizeof(char));
 	if (!sub)
 		return (NULL);
 	ft_bzero(sub, length);
-	if(start > ft_strlen(s) || !s[start])
-		return(sub);
-	i = 0;	
+	if (start > ft_strlen(s) || !s[start])
+		return (sub);
+	i = 0;
 	while (i < length - 1)
 	{
 		sub[i] = s[start + i];
@@ -52,8 +52,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub[i] = '\0';
 	return (sub);
 }
-// NOTE
-// if index is beyond the length, should always return "\0"
 // int main()
 // {
 // 	char *test = ft_substr("hello", 4294967295, 0);

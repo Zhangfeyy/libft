@@ -6,30 +6,38 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 20:51:01 by fzhang            #+#    #+#             */
-/*   Updated: 2025/05/04 15:23:58 by marvin           ###   ########.fr       */
+/*   Updated: 2025/05/05 12:24:24 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+
+static int	check(t_list *lst, t_list **temp_new,
+	void *(*f)(void *), void (*del)(void *))
+{
+	void	*content;
+
+	if (!lst)
+		return (1);
+	content = f(lst->content);
+	*temp_new = ft_lstnew(content);
+	if (!(*temp_new))
+	{
+		del(content);
+		return (1);
+	}
+	return (0);
+}
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*temp_old;
 	t_list	*temp_new;
 	t_list	*new;
-	void * content;
+	void	*content;
 
-	if(!lst)
+	temp_new = NULL;
+	if (check(lst, &temp_new, f, del))
 		return (NULL);
-	content = f(lst->content);
-	temp_new = ft_lstnew(content);
-	//So, is del(content) already called inside ft_lstclear(&new, del);?
-	//Answer: Yes — but only for the content of nodes that were successfully added to the list.
-	if (!temp_new)
-	{
-		del(content);
-		return (NULL);
-	}
-	//the problem is here, when i call new again, it will parse the latest address of temp_new
 	temp_old = lst;
 	new = temp_new;
 	while (temp_old->next)
@@ -45,7 +53,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		}
 		temp_new = temp_new->next;
 	}
-	return new;
+	return (new);
 }
 // int main()
 // {

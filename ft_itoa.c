@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*str_limit(void)
+static char	*str_limit(void)
 {
 	char	*ns;
 	char	*limit;
@@ -31,7 +31,7 @@ char	*str_limit(void)
 	return (ns);
 }
 
-int	get_len(int n)
+static int	get_len(int n)
 {
 	int	i;
 
@@ -49,7 +49,7 @@ int	get_len(int n)
 	return (i);
 }
 
-void	convert(int n, char *str, int *i)
+static void	convert(int n, char *str, int *i)
 {
 	if (n / 10 != 0)
 	{

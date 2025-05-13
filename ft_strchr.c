@@ -15,17 +15,14 @@ char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
-		if ((char)*s == (unsigned char)c) //casting!
+		if ((char)*s == (unsigned char)c)
 			return ((char *)s);
 		s++;
 	}
 	if ((unsigned char)c == 0)
 		return ((char *)s);
-	return (NULL); 
-	//E- if c is not founded, return a NULL pointer
+	return (NULL);
 }
-// NOTE
-// char can hold the value 0 — it represents the null character ('\0')
 // int main ()
 // {
 // 	const char *s = "test";

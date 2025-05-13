@@ -10,39 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-//iterate a string from the end to the start with a condition control!
-//it does not have a '/0' buffer
-// size_t ft_strlen(const char * s)
-// {
-// 	size_t count;
 
-// 	count = 0;
-// 	while(s[count])
-// 		count++;
-// 	return count;
-// }
-
-// void	*ft_memset(void *s, int c, size_t n)
-// {
-// 	size_t			count;
-// 	unsigned char	*copy;
-
-// 	copy = s;
-// 	count = 0;
-// 	while (count < n)
-// 	{
-// 		copy[count] = c;
-// 		count++;
-// 	}
-// 	return (s);
-// }
-
-// void	ft_bzero(void *s, size_t n)
-// {
-// 	(ft_memset(s, '\0', n));
-// }
-
-int	check_set(char c, char const *set)
+static int	check_set(char c, char const *set)
 {
 	size_t	i;
 
@@ -56,7 +25,7 @@ int	check_set(char c, char const *set)
 	return (0);
 }
 
-size_t	get_start(char const *s1, char const *set)
+static size_t	get_start(char const *s1, char const *set)
 {
 	size_t	start_count;
 
@@ -66,7 +35,7 @@ size_t	get_start(char const *s1, char const *set)
 	return (start_count);
 }
 
-size_t	get_end(char const *s1, char const *set)
+static size_t	get_end(char const *s1, char const *set)
 {
 	size_t	len;
 	size_t	end_count;
@@ -91,7 +60,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (i_s == ft_strlen(s1))
 		length = 1;
 	else
-		length = ft_strlen((char *)s1) -i_s - i_e + 1;
+		length = ft_strlen((char *)s1) - i_s - i_e + 1;
 	trimmed = (char *)malloc(length * sizeof(char));
 	if (!trimmed)
 		return (NULL);
@@ -104,7 +73,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	return (trimmed);
 }
-
 // int main()
 // {
 // 	char *s = ft_strtrim("   xxxtest   xxx", " x");

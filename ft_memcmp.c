@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-//char array is different from string, without nul terminal
+
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*copy1;
 	unsigned char	*copy2;
-	size_t				count;
+	size_t			count;
 
 	copy1 = (unsigned char *)s1;
 	copy2 = (unsigned char *)s2;
@@ -28,7 +28,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
 // int main()
 // {
 // 	char s[] = {-128, 0, 127, 0};

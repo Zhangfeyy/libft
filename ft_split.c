@@ -11,33 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-// size_t ft_strlen(const char *s)
-// {
-// 	size_t count;
-// 	count = 0;
-// 	while(s[count])
-// 	{
-// 		count++;
-// 	}
-// 	return(count);
-// }
-
-// int	ft_strncmp(const char *s1, const char *s2, size_t n)
-// {
-// 	size_t	i;
-
-// 	i = 0;
-// 	while (i < n && (s1[i] | s2[i]))
-// 	{
-// 		if (s1[i] != s2[i])
-// 			return ((unsigned char)(s1[i]) - (unsigned char)(s2[i])); //all converted into unsigned characters
-// 		i++;
-// 	}
-// 	return (0);
-// }
-//
-// also control the boundary in the loop structure
-size_t	get_len(char const *s, char c)
+static size_t	get_len(char const *s, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -58,7 +32,7 @@ size_t	get_len(char const *s, char c)
 	return (count);
 }
 
-char	*get_item(char const *s, char c, size_t *i)
+static char	*get_item(char const *s, char c, size_t *i)
 {
 	char	*item;
 	size_t	j;
@@ -66,7 +40,6 @@ char	*get_item(char const *s, char c, size_t *i)
 
 	len = 0;
 	j = *i;
-	// control the boundary in the loop structure itself
 	while (s[j] != c && (j < ft_strlen(s)))
 	{
 		len++;
@@ -86,7 +59,7 @@ char	*get_item(char const *s, char c, size_t *i)
 	return (item);
 }
 
-void	remove_mem(char **split, size_t j)
+static void	remove_mem(char **split, size_t j)
 {
 	while (j > 0)
 	{
@@ -97,7 +70,7 @@ void	remove_mem(char **split, size_t j)
 	free(split);
 }
 
-char	**fillin_split(char const *s, char c, char **split)
+static char	**fillin_split(char const *s, char c, char **split)
 {
 	size_t	i;
 	size_t	j;
